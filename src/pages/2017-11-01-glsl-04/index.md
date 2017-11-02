@@ -15,3 +15,4 @@ excerpt: Gatsby is an incredible static site generator that lets you build a sta
 ---
 
 Your next, great blog post goes here asda
+![hipster guy](./preview.png)
