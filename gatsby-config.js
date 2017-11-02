@@ -27,8 +27,6 @@ module.exports = {
             }
           },
           'gatsby-remark-prismjs',
-          'gatsby-remark-smartypants',
-          'gatsby-remark-autolink-headers'
         ]
       }
     },
