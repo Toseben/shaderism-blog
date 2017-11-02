@@ -27,6 +27,7 @@ module.exports = {
             }
           },
           'gatsby-remark-prismjs',
+          `gatsby-remark-responsive-iframe`,
         ]
       }
     },

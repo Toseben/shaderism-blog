@@ -26,7 +26,7 @@ const TitleContainer = styled.div`
   color: white;
   position: relative;
   padding-top: ${rhythm(1)};
-  padding-bottom: ${rhythm(1.5)};
+  padding-bottom: ${rhythm(2.0)} !important;
   transition: background-color 125ms ease-in-out;
   @media only screen and (min-width: 768px) {
     padding: ${rhythm(1.75)} 0;
