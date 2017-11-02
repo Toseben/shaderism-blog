@@ -1,0 +1,60 @@
+{
+  "name": "shaderism-blog",
+  "description": "Shaderism Blog",
+  "version": "1.0.0",
+  "author": "Arttu Koskela <shaderism@gmail.com>",
+  "dependencies": {
+    "gatsby": "^1.9.86",
+    "gatsby-link": "^1.6.24",
+    "gatsby-plugin-catch-links": "^1.0.9",
+    "gatsby-plugin-google-analytics": "^1.0.11",
+    "gatsby-plugin-manifest": "^1.0.8",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-react-next": "^1.0.4",
+    "gatsby-plugin-sharp": "^1.6.14",
+    "gatsby-plugin-styled-components": "^1.0.5",
+    "gatsby-remark-autolink-headers": "^1.4.7",
+    "gatsby-remark-copy-linked-files": "^1.5.16",
+    "gatsby-remark-images": "^1.5.25",
+    "gatsby-remark-prismjs": "^1.2.9",
+    "gatsby-remark-smartypants": "^1.4.8",
+    "gatsby-source-filesystem": "^1.5.6",
+    "gatsby-transformer-remark": "^1.7.19",
+    "gatsby-transformer-sharp": "^1.6.13",
+    "lodash.debounce": "^4.0.8",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-icons": "^2.2.7",
+    "react-typography": "^0.16.5",
+    "styled-components": "^2.2.3",
+    "typography": "^0.16.6",
+    "typography-breakpoint-constants": "^0.15.10",
+    "typography-plugin-code": "^0.15.11",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.1",
+    "del-cli": "^1.1.0",
+    "gh-pages": "~1.0.0",
+    "jest": "^21.2.1",
+    "prettier": "^1.7.4"
+  },
+  "keywords": [
+    "blog",
+    "opengl",
+    "shaderism"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths",
+    "postdeploy": "gh-pages -d public",
+    "develop": "gatsby develop",
+    "preserve": "npm run build",
+    "serve": "gatsby serve",
+    "start": "npm run develop",
+    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Should probably write some tests!\""
+  }
+}
