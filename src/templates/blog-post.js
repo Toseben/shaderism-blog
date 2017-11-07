@@ -7,7 +7,7 @@ import Tags from '../components/Tags';
 
 import { fadeInBottom } from '../css/animations';
 
-import 'prismjs/themes/prism-okaidia.css';
+import 'prismjs/themes/prism-tomorrow.css';
 
 const Container = styled.div`
   max-width: 100%;

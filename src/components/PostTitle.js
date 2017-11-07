@@ -36,7 +36,7 @@ const TitleContainer = styled.div`
 
 const Title = styled.h1`
   display: block;
-  margin: 0;
+  margin: 0 ${rhythm(2)};
   font-size: ${rhythm(1)};
   line-height: ${rhythm(1.5)};
   @media only screen and (min-width: 768px) {

@@ -83,7 +83,7 @@
 .post-content a:before {
   top: -2px;
   transform: translateY(24px);
-  opacity: 0; 
+  opacity: 0;
   transition: 200ms ease-out;
 }
 
