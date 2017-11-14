@@ -56,7 +56,7 @@ export default function BlogPost({ data = {}, location, pathContext }) {
     },
     {
       name: `twitter:creator`,
-      content: `arttukoskela`,
+      content: `changeme`,
     },
     {
       name: `author`,
