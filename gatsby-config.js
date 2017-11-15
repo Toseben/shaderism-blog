@@ -44,10 +44,10 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: `Shaderism`,
-        description: 'The blog of the developer, Arttu Koskela',
+        description: 'The homepage of WebGL design consultancy, Shaderism',
         short_name: 'Shaderism Blog',
         background_color: 'white',
-        theme_color: '#002635',
+        theme_color: '#465d57',
         orientation: 'portrait',
         display: 'minimal-ui'
       }

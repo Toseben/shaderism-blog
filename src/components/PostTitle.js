@@ -10,7 +10,7 @@ const toStyle = props => {
     return `
       cursor: pointer;
       &:hover {
-        background: ${getColorFromString(props.title, 30, 100)};
+        background: ${getColorFromString(props.title, 45, 35)};
       }
     `;
   }

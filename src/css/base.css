@@ -3,7 +3,9 @@ html, body, #___gatsby {
 }
 
 body {
-  background-color: #002635;
+  /*background-color: #ccd7d1;*/
+  background-image: url("../images/seamless.jpg");
+  background-size: 100vh;
 }
 
 ::selection {

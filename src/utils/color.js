@@ -11,8 +11,15 @@ const getHSL = (number, saturation, lightness) => {
   return `hsl(${shortened}, ${saturation}%, ${lightness}%)`;
 };
 
-export const getColorFromString = (str, lightness = 20, saturation = 90) => {
-  return getHSL(getHashCode(str), saturation, lightness);
+export const getColorFromString = (str, lightness = 40, saturation = 20) => {
+  let modHash = Math.abs(getHashCode(str) % 360);
+  if (modHash > 180) {
+    modHash = modHash * 0.2 + 20;
+  } else {
+    modHash = modHash * 0.2 + 140;
+  }
+
+  return getHSL(modHash, saturation, lightness);
 };
 
 export const getGradientFromString = (

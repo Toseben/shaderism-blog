@@ -6,9 +6,11 @@ import NavigationButton from './NavigationButton';
 
 import { animateBackground, animateShake } from '../css/animations';
 
+import headerTex from '../images/header.jpg'
+
 const Header = styled.header`
   height: ${props => (props.isPost ? '15vh' : '25vh')};
-  background-color: #ffa81f;
+  ${'' /* background-color: #ffa81f; */}
   color: blue;
   position: fixed;
   top: 0;
@@ -18,9 +20,11 @@ const Header = styled.header`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#ffa81f, #d85d15);
-  background-size: 250% 250%;
-  animation: ${animateBackground} 10s ease infinite;
+  ${'' /* background: linear-gradient(#ffa81f, #d85d15); */}
+  background-size: 100% 100%;
+  background-image: url(${headerTex});
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+  ${'' /* animation: ${animateBackground} 10s ease infinite; */}
   font-weight: 400;
   transition: height 250ms ease-in-out;
   user-select: none;
@@ -37,7 +41,8 @@ const Name = styled.h1`
   font-weight: 700;
   align-items: center;
   transition: font-size 250ms ease-in-out, padding 150ms ease-in;
-  background-color: #002635;
+  background-color: #132726;
+  box-shadow:0 0 20px rgba(0,0,0,0.5);
   color: white;
   padding: 0.5rem 1rem;
   margin: 0;
