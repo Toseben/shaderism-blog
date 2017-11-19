@@ -1,0 +1,21 @@
+import React from 'react';
+import Link from 'gatsby-link';
+
+import Fullscreen from '../fullscreen';
+// import Wrapper from '../wrapper';
+
+import styles from './styles.module.css';
+
+const Menu = ({ active, onNavClick }) => {
+  const linkProps = {
+    onClick: onNavClick,
+    // activeClassName: styles.active,
+  };
+
+  return (
+    <Fullscreen className={active ? styles.menu : styles.disable}>
+    </Fullscreen>
+  );
+};
+
+export default Menu;

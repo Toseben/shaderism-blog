@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Arttu Koskela <shaderism@gmail.com>",
   "dependencies": {
+    "classnames": "^2.2.5",
     "gatsby": "^1.9.92",
     "gatsby-link": "^1.6.24",
     "gatsby-plugin-catch-links": "^1.0.9",

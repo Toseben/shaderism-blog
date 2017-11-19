@@ -46,7 +46,6 @@ const Post = styled.section`
   width: 100%;
   background-color: white;
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
-  background-color: white;
   outline: 1px solid rgba(0, 0, 0, 0.125);
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
