@@ -21,6 +21,8 @@ export default function BlogPost({ data = {}, location, pathContext }) {
   const { markdownRemark: post } = data;
   const { next, prev } = pathContext;
 
+  const isAbout = location.pathname.match(/about/)
+
   const description = post.frontmatter.excerpt
     ? post.frontmatter.excerpt
     : post.excerpt;
@@ -89,6 +91,8 @@ export default function BlogPost({ data = {}, location, pathContext }) {
       : []
   );
 
+  console.log('dog', post.frontmatter.link)
+
   return (
     <Container>
       <Helmet title={`Shaderism - ${post.frontmatter.title}`} meta={meta} />
@@ -125,6 +129,7 @@ export const pageQuery = graphql`
         rawDate: date
         excerpt
         path
+        link
         tags
         title
         image {

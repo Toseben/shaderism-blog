@@ -44,7 +44,7 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: `Shaderism`,
-        description: 'The homepage of WebGL design consultancy, Shaderism',
+        description: 'Shaderism is a design studio specialized in WebGL. We create interactive websites, VR experiences and more!',
         short_name: 'Shaderism Blog',
         background_color: 'white',
         theme_color: '#465d57',

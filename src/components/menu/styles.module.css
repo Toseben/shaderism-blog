@@ -1,5 +1,16 @@
 @import '../../css/variables.css';
 
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+ol, ul {
+  list-style: none;
+}
+
 .menu {
   background: var(--colorBlack);
   color: var(--colorWhite);
@@ -15,9 +26,11 @@
 }
 
 .item {
-  font-family: Medium, Arial, Helvetica, sans-serif;
-  font-size: 3rem;
-  line-height: 2.1;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 2;
 }
 
 .active {

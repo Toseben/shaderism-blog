@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import Fullscreen from '../fullscreen';
-// import Wrapper from '../wrapper';
+import Wrapper from '../wrapper';
 
 import styles from './styles.module.css';
 
@@ -14,6 +14,18 @@ const Menu = ({ active, onNavClick }) => {
 
   return (
     <Fullscreen className={active ? styles.menu : styles.disable}>
+      <Wrapper>
+        <nav>
+          <ul>
+            <li className={styles.item}>
+              <Link {...linkProps} to="/">Blog</Link>
+            </li>
+            <li className={styles.item}>
+              <Link {...linkProps} to="/about">About</Link>
+            </li>
+          </ul>
+        </nav>
+      </Wrapper>
     </Fullscreen>
   );
 };

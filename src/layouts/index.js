@@ -57,7 +57,7 @@ export default class Template extends React.Component {
           meta={[
             {
               name: 'description',
-              content: 'The homepage of WebGL design consultancy, Shaderism',
+              content: 'Shaderism is a design studio specialized in WebGL. We create interactive websites, VR experiences and more!',
             },
             {
               name: 'keywords',

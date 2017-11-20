@@ -105,6 +105,7 @@ export default function({
     }
     return falsy;
   };
+
   return (
     <Post className={[`post`].concat(className || []).join(' ')} {...rest}>
       <PostTitle title={title} to={isPost(false, linkTo)}>

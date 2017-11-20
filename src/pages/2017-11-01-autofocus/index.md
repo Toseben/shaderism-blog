@@ -1,7 +1,7 @@
 ---
 path: "/depth-of-field-with-custom-autofocus"
 date: "2017-11-01T20:24:50.791Z"
-title: "Depth of Field, BokehShader: Autofocus to Closest Point with Three.js"
+title: "Depth of Field: Autofocus to Closest Point with Three.js"
 tags:
   - bokeh
   - depth of field
