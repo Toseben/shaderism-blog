@@ -91,8 +91,6 @@ export default function BlogPost({ data = {}, location, pathContext }) {
       : []
   );
 
-  console.log('dog', post.frontmatter.link)
-
   return (
     <Container>
       <Helmet title={`Shaderism - ${post.frontmatter.title}`} meta={meta} />

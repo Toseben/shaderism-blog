@@ -1,8 +1,10 @@
 ---
 path: "/about"
+date: "2017-10-01T20:20:20.791Z"
 title: "About"
 image: shaderism.jpg
-draft: true
+excerpt: A brief about text!
+draft: false
 link: "/about"
 ---
 

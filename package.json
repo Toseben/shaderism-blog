@@ -49,14 +49,12 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths",
-    "postdeploy": "gh-pages -d public",
-    "develop": "gatsby develop",
-    "preserve": "npm run build",
+    "prebuild": "npm run clean",
+    "build": "cross-env NODE_ENV=production gatsby build --prefix-paths",
+    "clean": "del-cli \"public/**/*\" \".cache/**/*\"",
+    "develop": "npm run start",
+    "preserve": "gatsby build",
     "serve": "gatsby serve",
-    "start": "npm run develop",
-    "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\"",
-    "test": "echo \"Should probably write some tests!\""
+    "start": "cross-env NODE_ENV=development gatsby develop --open"
   }
 }
