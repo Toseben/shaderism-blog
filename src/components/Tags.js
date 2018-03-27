@@ -17,10 +17,10 @@ const Tag = styled.li`
   display: inline-block;
   margin: ${rhythm(1 / 4)} ${rhythm(1 / 4)};
   padding: ${rhythm(1 / 6)} ${rhythm(1 / 2)};
-  background-color: ${props => getColorFromString(props.title, 92.5, 35)};
-  border: 2px solid ${props => getColorFromString(props.title, 92.5, 35)};
-  color: ${props => getColorFromString(props.title, 35, 40)};
-  transition: all 150ms ease-in-out;
+  background-color: ${props => getColorFromString(props.title)};
+  border: 2px solid ${props => getColorFromString(props.title)};
+  color: ${props => getColorFromString(props.title, 0, 75)};
+  transition: all 250ms ease-in-out;
   font-size: ${rhythm(1 / 2)};
   font-weight: bold;
   &:first-child {
@@ -28,7 +28,8 @@ const Tag = styled.li`
   }
   &:hover {
     background-color: transparent;
-    border-color: ${props => getColorFromString(props.title, 35, 40)};
+    color: ${props => getColorFromString(props.title)};
+    border-color: ${props => getColorFromString(props.title)};
   }
 `;
 

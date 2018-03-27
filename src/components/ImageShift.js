@@ -5,7 +5,13 @@ import debounce from 'lodash.debounce';
 const Image = styled.img`
   display: block;
   max-width: 100%;
+  width: 25%;
+  padding: 5vmin;
+  margin: -2.5vmin 0;
   transition: 175ms ease-in-out;
+  &:hover {
+    transform: scale(1.075);
+  }
 `;
 
 export default class ImageShift extends Component {
@@ -85,6 +91,6 @@ export default class ImageShift extends Component {
   render() {
     const { src } = this.props;
     const style = this.getImageStyle();
-    return <Image src={src} style={style} onLoad={() => this.setHeight()} />;
+    return <Image className="image" src={src} style={style} onLoad={() => this.setHeight()} />;
   }
 }

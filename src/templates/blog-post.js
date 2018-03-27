@@ -3,6 +3,8 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import Post from '../components/Post';
+import About from '../components/About';
+import Work from '../components/Work';
 import Tags from '../components/Tags';
 
 import { fadeInBottom } from '../css/animations';
@@ -22,6 +24,7 @@ export default function BlogPost({ data = {}, location, pathContext }) {
   const { next, prev } = pathContext;
 
   const isAbout = location.pathname.match(/about/)
+  const isWork = location.pathname.match(/work/)
 
   const description = post.frontmatter.excerpt
     ? post.frontmatter.excerpt
@@ -90,6 +93,42 @@ export default function BlogPost({ data = {}, location, pathContext }) {
         ]
       : []
   );
+
+  if (isAbout) {
+    return (
+      <Container>
+        <Helmet title={`Shaderism - ${post.frontmatter.title}`} meta={meta} />
+        <About
+          className="blog-post"
+          html={post.html}
+          date={post.frontmatter.date}
+          linkTo={post.frontmatter.link || '/'}
+          title={post.frontmatter.title}
+          next={next}
+          prev={prev}
+        >
+        </About>
+      </Container>
+    );
+  }
+
+  if (isWork) {
+    return (
+      <Container>
+        <Helmet title={`Shaderism - ${post.frontmatter.title}`} meta={meta} />
+        <Work
+          className="blog-post"
+          html={post.html}
+          date={post.frontmatter.date}
+          linkTo={post.frontmatter.link || '/'}
+          title={post.frontmatter.title}
+          next={next}
+          prev={prev}
+        >
+        </Work>
+      </Container>
+    );
+  }
 
   return (
     <Container>

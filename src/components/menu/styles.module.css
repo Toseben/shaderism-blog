@@ -12,9 +12,9 @@ ol, ul {
 }
 
 .menu {
-  background: var(--colorBlack);
+  background: var(--colorTwo);
   color: var(--colorWhite);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: var(--zIndexMenu);

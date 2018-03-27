@@ -50,6 +50,8 @@ export default class Template extends React.Component {
       location.pathname !== '/' && !location.pathname.match(/^\/blog\/?$/);
     const { menuActive } = this.state;
 
+    const isWork = location.pathname.match(/work/)
+
     return (
       <Root>
         <Helmet
@@ -72,7 +74,7 @@ export default class Template extends React.Component {
         <Menu onNavClick={() => this.toggleMenu(false)} active={menuActive} />
 
         <Header isPost={isPost} />
-        <Content isPost={isPost} Footer={Footer}>
+        <Content isPost={isPost} Footer={Footer} isWork={isWork}>
           {children()}
         </Content>
       </Root>

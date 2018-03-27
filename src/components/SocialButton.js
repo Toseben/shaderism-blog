@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import GithubIcon from 'react-icons/lib/fa/github';
 import FacebookIcon from 'react-icons/lib/fa/facebook-square';
 import HomeIcon from 'react-icons/lib/fa/home';
-import TwitterIcon from 'react-icons/lib/fa/twitter';
+import MailIcon from 'react-icons/lib/fa/envelope';
+// import TwitterIcon from 'react-icons/lib/fa/twitter';
 
 const Container = styled.div`
   display: flex;
@@ -35,7 +36,7 @@ const Types = {
     return (
       <ExternalLink
         hoverColor="#3b5998"
-        href="https://www.facebook.com/arttu.koskela"
+        href="https://www.facebook.com/shaderism/"
         {...props}
       >
         <FacebookIcon size={32} />
@@ -57,10 +58,10 @@ const Types = {
     return (
       <ExternalLink
         hoverColor="#fff"
-        href="http://www.arttukoskela.com"
+        href="mailto:shaderism@gmail.com"
         {...props}
       >
-        <HomeIcon size={32} />
+        <MailIcon size={32} />
       </ExternalLink>
     );
   },

@@ -10,7 +10,7 @@ const toStyle = props => {
     return `
       cursor: pointer;
       &:hover {
-        background: ${getColorFromString(props.title, 45, 20)};
+        background: ${getColorFromString(props.title, -10, 20)};
       }
     `;
   }
@@ -39,10 +39,11 @@ const Title = styled.h1`
   margin: 0 ${rhythm(2)};
   font-size: ${rhythm(1)};
   line-height: ${rhythm(1.5)};
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding: ${rhythm(1 / 2)} 0;
   @media only screen and (min-width: 768px) {
-    padding: ${rhythm(1 / 2)} 0;
-    border-top: 4px solid #fff;
-    border-bottom: 4px solid #fff;
+    border-width: 4px;
     font-size: ${rhythm(1.5)};
     line-height: ${rhythm(2)};
   }

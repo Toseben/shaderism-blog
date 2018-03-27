@@ -1,14 +1,16 @@
+@import './variables.css';
+
 html, body, #___gatsby {
   height: 100%;
 }
 
 body {
-  /*background-color: #ccd7d1;*/
-  background-image: url("../images/seamless.jpg");
+  background-color: var(--colorSix);
+  background-image: url("../images/background.jpg");
   background-size: 100vh;
 }
 
 ::selection {
-  background: #FF6138;
-  color: white;
+  background: var(--colorOne);
+  color: var(--colorWhite);
 }

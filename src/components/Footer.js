@@ -12,8 +12,8 @@ const Container = styled.footer`
 
 export default function Footer() {
   const colors = {
-    color: `rgba(19, 39, 38, 0.6)`,
-    hoverColor: `rgba(19, 39, 38, 1)`,
+    color: `#FFF`,
+    hoverColor: `#FFF`,
   };
   return (
     <Container>

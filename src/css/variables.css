@@ -7,7 +7,13 @@
 
   /* Colors */
   --colorBlack: #000;
-  --colorWhite: #fff;
+  --colorWhite: #FFF;
+  --colorOne: #D85D15;
+  --colorTwo: #0B0C10;
+  --colorThree: #C5C6C7;
+  --colorFour: #66FCF1;
+  --colorFive: #45A29E;
+  --colorSix: #1F2833;
 
   /* Z Index Scale */
   --zIndexHeader: 200;
