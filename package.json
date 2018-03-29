@@ -50,7 +50,7 @@
   "main": "n/a",
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "cross-env NODE_ENV=production gatsby build --prefix-paths",
+    "generate": "cross-env NODE_ENV=production gatsby build --prefix-paths",
     "clean": "del-cli \"public/**/*\" \".cache/**/*\"",
     "develop": "npm run start",
     "preserve": "gatsby build",
