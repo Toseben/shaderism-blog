@@ -139,42 +139,50 @@ export default function({
             title='Particles & Shaders'
             details='Interactive Particles'
           />
-          <WorkItem src={buy}
-            title='3D Store'
-            details='Interactive Product'
-          />
-          <WorkItem src={envportal}
-            title='Virtual House Tour'
-            details='Interactive VR Experience'
-          />
-          <WorkItem src={spinningglobe}
-            title='Spinning Globe'
-            details='Data Visualization'
-          />
-          <WorkItem src={bankvis}
-            title='3D Interior Design'
-            details='Interactive VR Experience'
-          />
 
           <WorkItem src={ikea}
             title='IKEA'
             details='T-shirts'
           />
-          <WorkItem src={johnlewis}
-            title='John Lewis'
-            details='Christmas Advert 2016'
+
+          <WorkItem src={buy}
+            title='3D Store'
+            details='Interactive Product'
           />
+
           <WorkItem src={candycrush}
             title='Candy Crush'
             details='Soda Saga - King Laundrette'
           />
-          <WorkItem src={mclaren}
-            title='McLaren'
-            details='Black Swan Moments'
+
+          <WorkItem src={spinningglobe}
+            title='Spinning Globe'
+            details='Data Visualization'
           />
+
           <WorkItem src={ferrero}
             title='Ferrero Rocher'
             details='Magic Tree'
+          />
+
+          <WorkItem src={envportal}
+            title='Virtual House Tour'
+            details='Interactive VR Experience'
+          />
+
+          <WorkItem src={johnlewis}
+            title='John Lewis'
+            details='Christmas Advert 2016'
+          />
+
+          <WorkItem src={bankvis}
+            title='3D Interior Design'
+            details='Interactive VR Experience'
+          />
+
+          <WorkItem src={mclaren}
+            title='McLaren'
+            details='Black Swan Moments'
           />
 
         </ImageContainer>

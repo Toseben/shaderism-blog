@@ -12,7 +12,7 @@ ol, ul {
 }
 
 .menu {
-  background: var(--colorTwo);
+  background: var(--colorBlack);
   color: var(--colorWhite);
   position: fixed;
   top: 0;

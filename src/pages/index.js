@@ -18,10 +18,15 @@ const getParams = search => {
 export default function Index({ data, location }) {
   const { edges: posts } = data.allMarkdownRemark;
   const { start = 0, end = 10 } = getParams(location.search);
+
+  console.log(posts)
+
   return (
     <div>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
+        .filter(post => post.node.frontmatter.title !== 'Work')
+        .filter(post => post.node.frontmatter.title !== 'About')
         .slice(start, end)
         .map(({ node: post }) => {
           return (

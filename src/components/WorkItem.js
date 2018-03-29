@@ -78,7 +78,7 @@ const OverlayText = styled.div`
     font-weight: 700;
   }
   p {
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 100;
   }
 `;
