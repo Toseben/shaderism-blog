@@ -19,8 +19,6 @@ export default function Index({ data, location }) {
   const { edges: posts } = data.allMarkdownRemark;
   const { start = 0, end = 10 } = getParams(location.search);
 
-  console.log(posts)
-
   return (
     <div>
       {posts
