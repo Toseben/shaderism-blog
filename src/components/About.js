@@ -82,6 +82,7 @@ const Divider = styled.hr`
 `;
 
 const Container = styled.div`
+  padding: 0 2vw;
   background-color: white;
   max-width: 100%;
   transform: translateY(16px) scale(.99);

@@ -138,51 +138,61 @@ export default function({
           <WorkItem src={particles}
             title='Particles & Shaders'
             details='Interactive Particles'
+            href=""
           />
 
           <WorkItem src={ikea}
             title='IKEA'
             details='T-shirts'
+            href="https://www.youtube.com/embed/GQsU_2p4atU?rel=0&autoplay=1"
           />
 
           <WorkItem src={buy}
             title='3D Store'
             details='Interactive Product'
+            href=""
           />
 
           <WorkItem src={candycrush}
             title='Candy Crush'
             details='Soda Saga - King Laundrette'
+            href="https://www.youtube.com/embed/9IEHWYEB-2o?rel=0&autoplay=1"
           />
 
           <WorkItem src={spinningglobe}
             title='Spinning Globe'
             details='Data Visualization'
+            href=""
           />
 
           <WorkItem src={ferrero}
             title='Ferrero Rocher'
             details='Magic Tree'
+            href="https://vimeo.com/120052256?autoplay=1"
           />
 
           <WorkItem src={envportal}
             title='Virtual House Tour'
             details='Interactive VR Experience'
+            href=""
           />
 
           <WorkItem src={johnlewis}
             title='John Lewis'
             details='Christmas Advert 2016'
+            href="https://www.youtube.com/embed/sr6lr_VRsEo?rel=0&autoplay=1"
           />
 
           <WorkItem src={bankvis}
             title='3D Interior Design'
             details='Interactive VR Experience'
+            href="https://toseben.github.io/interactive_webViz/"
           />
 
           <WorkItem src={mclaren}
             title='McLaren'
             details='Black Swan Moments'
+            href="https://www.youtube.com/embed/5Qm2yFx3C-M?rel=0&autoplay=1"
           />
 
         </ImageContainer>

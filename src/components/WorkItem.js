@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import debounce from 'lodash.debounce';
+import noiseImg from '../images/noise.png'
 
 const WorkItemContainer = styled.a`
   overflow: hidden;
@@ -54,6 +55,15 @@ const OverlayWrap = styled.div`
     margin-left: 2.5vw;
     opacity: 1;
   }
+  &:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(${noiseImg});
+  background-repeat: repeat;
+  background-size: 20vh;
+}
 `;
 
 const OverlayText = styled.div`
@@ -78,7 +88,7 @@ const OverlayText = styled.div`
     font-weight: 700;
   }
   p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 100;
   }
 `;
@@ -164,11 +174,13 @@ export default class WorkItem extends Component {
   }
 
   render() {
-    const { src, title, details } = this.props;
+    const { src, title, details, href } = this.props;
     const style = this.getImageStyle();
 
+    console.log(href)
+
     return (
-      <WorkItemContainer target="_blank" href={title}>
+      <WorkItemContainer target="_blank" href={href}>
         <Image src={src} style={style} onLoad={() => this.setHeight()} />
         <OverlayWrap className="overlay-wrap">
           <OverlayText className="overlay-text">

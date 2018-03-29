@@ -10,7 +10,8 @@
 
 @media (--small) {
   .container {
-    margin: 6px;
+    transform: translateY(-50%);
+    margin: 7.5vh 6px;
   }
 }
 
