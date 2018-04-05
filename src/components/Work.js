@@ -138,7 +138,7 @@ export default function({
           <WorkItem src={particles}
             title='Particles & Shaders'
             details='Interactive Particles'
-            href=""
+            href="http://arttukoskela.com/particles/"
           />
 
           <WorkItem src={ikea}
@@ -150,7 +150,7 @@ export default function({
           <WorkItem src={buy}
             title='3D Store'
             details='Interactive Product'
-            href=""
+            href="http://arttukoskela.com/store/"
           />
 
           <WorkItem src={candycrush}
@@ -162,25 +162,25 @@ export default function({
           <WorkItem src={spinningglobe}
             title='Spinning Globe'
             details='Data Visualization'
-            href=""
+            href="http://arttukoskela.com/globe/"
           />
 
           <WorkItem src={ferrero}
             title='Ferrero Rocher'
             details='Magic Tree'
-            href="https://vimeo.com/120052256?autoplay=1"
+            href="https://vimeo.com/113725194?autoplay=1"
           />
 
           <WorkItem src={envportal}
             title='Virtual House Tour'
             details='Interactive VR Experience'
-            href=""
+            href="https://toseben.github.io/interactive_webViz/"
           />
 
           <WorkItem src={johnlewis}
             title='John Lewis'
             details='Christmas Advert 2016'
-            href="https://www.youtube.com/embed/sr6lr_VRsEo?rel=0&autoplay=1"
+            href="https://www.youtube.com/embed/4qo27xcVS5I?rel=0&autoplay=1"
           />
 
           <WorkItem src={bankvis}
