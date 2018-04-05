@@ -174,7 +174,7 @@ export default function({
           <WorkItem src={envportal}
             title='Virtual House Tour'
             details='Interactive VR Experience'
-            href="https://toseben.github.io/interactive_webViz/"
+            href="http://arttukoskela.com/tour/"
           />
 
           <WorkItem src={johnlewis}
