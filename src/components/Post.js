@@ -1,7 +1,9 @@
 import React from 'react';
-import styled, { injectGlobal } from 'styled-components';
+import styled from "@emotion/styled";
+import { injectGlobal } from "emotion";
+import { graphql } from 'gatsby'
 import { rhythm } from '../utils/typography';
-import MdListIcon from 'react-icons/lib/md/list';
+import { MdList } from "react-icons/md";
 
 import PostTitle from './PostTitle';
 import Toolbar from './PostToolbar';
@@ -79,7 +81,7 @@ const Divider = styled.hr`
   border-bottom: 1px solid #eee;
 `;
 
-const ListIcon = styled(MdListIcon)`
+const ListIcon = styled(MdList)`
   font-size: 32px;
   margin-right: 0.5rem;
 `;
@@ -102,14 +104,13 @@ export default function({
 }) {
   const isPost = (truthy, falsy = null) => {
     if (linkTo === '/') {
-      return truthy;
+      return truthy
     }
-    return falsy;
-  };
-
+    return falsy
+  }
   return (
     <Post className={[`post`].concat(className || []).join(' ')} {...rest}>
-      <PostTitle title={title} to={isPost(false, linkTo)}>
+      <PostTitle title={title} to={isPost(undefined, linkTo)}>
         <Toolbar
           title={title}
           date={date}
@@ -133,5 +134,23 @@ export default function({
         )}
       </StyledLink>
     </Post>
-  );
+  )
 }
+
+export const postFragment = graphql`
+  fragment Post on MarkdownRemark {
+    id
+    html
+    excerpt(pruneLength: 160)
+    timeToRead
+    slug
+    frontmatter {
+      date(formatString: "MMMM DD, YYYY")
+      rawDate: date
+      draft
+      excerpt
+      tags
+      title
+    }
+  }
+`;

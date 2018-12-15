@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled'
 import debounce from 'lodash.debounce';
 
 const Image = styled.img`
@@ -16,44 +16,44 @@ const Image = styled.img`
 
 export default class ImageShift extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       mounted: false,
       scrollTop: 0,
-      scrollHeight: 0,
-    };
+      scrollHeight: 0
+    }
   }
 
   componentDidMount() {
     this.setState({
-      mounted: true,
-    });
-    this.scrollListener = this.handleScroll();
-    this.handleResize = this.handlePageResize();
-    addEventListener('scroll', this.scrollListener);
-    addEventListener('resize', this.handleResize);
+      mounted: true
+    })
+    this.scrollListener = this.handleScroll()
+    this.handleResize = this.handlePageResize()
+    window.addEventListener('scroll', this.scrollListener)
+    window.addEventListener('resize', this.handleResize)
   }
 
   componentWillUnmount() {
-    removeEventListener('scroll', this.scrollListener);
-    removeEventListener('resize', this.handleResize);
+    window.removeEventListener('scroll', this.scrollListener)
+    window.removeEventListener('resize', this.handleResize)
   }
 
   handleScroll() {
     return debounce(() => {
       requestAnimationFrame(() => {
         this.setState({
-          scrollTop: document.body.scrollTop,
-        });
-      });
-    }, 20);
+          scrollTop: document.body.scrollTop
+        })
+      })
+    }, 20)
   }
 
   handlePageResize() {
     return debounce(() => {
-      this.setHeight();
-    }, 25);
+      this.setHeight()
+    }, 25)
   }
 
   setHeight() {

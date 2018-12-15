@@ -2,55 +2,67 @@ module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
     title: `Shaderism`,
-    author: `Arttu Koskela`,
+    author: `Arttu Koskela`
   },
   plugins: [
-    'gatsby-plugin-react-next',
-    'gatsby-plugin-catch-links',
-    'gatsby-plugin-styled-components',
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: `Shaderism`,
+        description:
+          "Shaderism is a design studio specialized in WebGL. We create interactive websites, VR experiences and more!",
+        short_name: "Shaderism Blog",
+        background_color: "white",
+        theme_color: "#465d57",
+        orientation: "portrait",
+        display: "minimal-ui"
+      }
+    },
+    "gatsby-plugin-catch-links",
+    "gatsby-plugin-emotion",
+    "gatsby-plugin-remove-trailing-slashes",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
+        name: "pages"
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          'gatsby-remark-copy-linked-files',
+          "gatsby-remark-copy-linked-files",
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
               linkImagesToOriginal: false
             }
           },
-          'gatsby-remark-prismjs',
-          `gatsby-remark-responsive-iframe`,
+          "gatsby-remark-prismjs",
+          "gatsby-remark-smartypants",
+          "gatsby-remark-autolink-headers",
+          `gatsby-remark-responsive-iframe`
         ]
       }
     },
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-layout",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    "gatsby-plugin-offline",
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: "gatsby-plugin-typography",
       options: {
-        trackingId: 'UA-90417615-2'
+        omitGoogleFont: true,
+        pathToConfigModule: "src/utils/typography"
       }
     },
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-google-analytics",
       options: {
-        name: `Shaderism`,
-        description: 'Shaderism is a design studio specialized in WebGL. We create interactive websites, VR experiences and more!',
-        short_name: 'Shaderism Blog',
-        background_color: 'white',
-        theme_color: '#465d57',
-        orientation: 'portrait',
-        display: 'minimal-ui'
+        trackingId: "UA-90417615-2"
       }
     }
-  ],
-}
+  ]
+};

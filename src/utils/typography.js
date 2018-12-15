@@ -1,7 +1,9 @@
-import React from 'react';
+// import React from 'react';
 import Typography from 'typography';
 import CodePlugin from 'typography-plugin-code';
 import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants';
+import 'typeface-montserrat'
+import 'typeface-bitter'
 
 const options = {
   baseFontSize: '18px',
@@ -19,10 +21,7 @@ const options = {
 };
 
 const typography = new Typography(options);
+const { rhythm } = typography;
 
-// Hot reload typography in development.
-if (process.env.NODE_ENV !== 'production') {
-  typography.injectStyles();
-}
-
+export { rhythm };
 export default typography;

@@ -1,11 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled'
 
-import GithubIcon from 'react-icons/lib/fa/github';
-import FacebookIcon from 'react-icons/lib/fa/facebook-square';
-import HomeIcon from 'react-icons/lib/fa/home';
-import MailIcon from 'react-icons/lib/fa/envelope';
-// import TwitterIcon from 'react-icons/lib/fa/twitter';
+import { FaGithub, FaFacebook, FaMailBulk } from "react-icons/fa";
 
 const Container = styled.div`
   display: flex;
@@ -39,7 +35,7 @@ const Types = {
         href="https://www.facebook.com/shaderism/"
         {...props}
       >
-        <FacebookIcon size={32} />
+        <FaFacebook size={32} />
       </ExternalLink>
     );
   },
@@ -50,7 +46,7 @@ const Types = {
         href="https://github.com/Toseben"
         {...props}
       >
-        <GithubIcon size={32} />
+        <FaGithub size={32} />
       </ExternalLink>
     );
   },
@@ -61,7 +57,7 @@ const Types = {
         href="mailto:shaderism@gmail.com"
         {...props}
       >
-        <MailIcon size={32} />
+        <FaMailBulk size={32} />
       </ExternalLink>
     );
   },

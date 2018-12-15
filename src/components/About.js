@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { injectGlobal } from 'styled-components';
+import styled from "@emotion/styled";
+import { injectGlobal } from "emotion";
 import PostTitle from './PostTitle';
 import { rhythm } from '../utils/typography';
 import { fadeInBottom } from '../css/animations'

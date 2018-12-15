@@ -1,10 +1,11 @@
 import React from 'react';
-import styled, { injectGlobal } from 'styled-components';
-import PostTitle from './PostTitle';
+import styled from "@emotion/styled";
+import { injectGlobal } from "emotion";
+// import PostTitle from './PostTitle';
 import { rhythm } from '../utils/typography';
 import { fadeInBottom } from '../css/animations'
 
-import ImageShift from '../components/ImageShift'
+// import ImageShift from '../components/ImageShift'
 import WorkItem from '../components/WorkItem'
 
 import envportal from '../images/work/envportal.jpg'
@@ -70,21 +71,21 @@ const Post = styled.section`
   flex-direction: column;
 `;
 
-const PostContents = styled.div`
-  max-width: 100%;
-  padding: ${rhythm(3 / 4)} ${rhythm(1)};
-  @media only screen and (min-width: 768px) {
-    padding: ${rhythm(1)} ${rhythm(2)};
-    padding-top: ${rhythm(1)};
-  }
-`;
+// const PostContents = styled.div`
+//   max-width: 100%;
+//   padding: ${rhythm(3 / 4)} ${rhythm(1)};
+//   @media only screen and (min-width: 768px) {
+//     padding: ${rhythm(1)} ${rhythm(2)};
+//     padding-top: ${rhythm(1)};
+//   }
+// `;
 
-const Divider = styled.hr`
-  border: 0;
-  width: 75%;
-  margin: ${rhythm(1 / 2)} auto;
-  border-bottom: 1px solid #eee;
-`;
+// const Divider = styled.hr`
+//   border: 0;
+//   width: 75%;
+//   margin: ${rhythm(1 / 2)} auto;
+//   border-bottom: 1px solid #eee;
+// `;
 
 const Container = styled.div`
   background-color: white;
@@ -104,13 +105,13 @@ const ImageContainer = styled.div`
   position: relative;
 `
 
-const Image = styled(ImageShift)`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-`
+// const Image = styled(ImageShift)`
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+// `
 
 export default function({
   children,
@@ -123,12 +124,12 @@ export default function({
   prev,
   ...rest
 }) {
-  const isPost = (truthy, falsy = null) => {
-    if (linkTo === '/') {
-      return truthy;
-    }
-    return falsy;
-  };
+  // const isPost = (truthy, falsy = null) => {
+  //   if (linkTo === '/') {
+  //     return truthy;
+  //   }
+  //   return falsy;
+  // };
 
   return (
     <Post className={[`post`].concat(className || []).join(' ')} {...rest}>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import debounce from 'lodash.debounce';
+import styled from '@emotion/styled'
+// import debounce from 'lodash.debounce';
 import noiseImg from '../images/noise.png'
 
 const WorkItemContainer = styled.a`
@@ -114,32 +114,32 @@ export default class WorkItem extends Component {
     this.setState({
       mounted: true,
     });
-    this.scrollListener = this.handleScroll();
-    this.handleResize = this.handlePageResize();
-    addEventListener('scroll', this.scrollListener);
-    addEventListener('resize', this.handleResize);
+    // this.scrollListener = this.handleScroll();
+    // this.handleResize = this.handlePageResize();
+    // window.addeventlistener('scroll', this.scrollListener);
+    // window.addeventlistener('resize', this.handleResize);
   }
 
   componentWillUnmount() {
-    removeEventListener('scroll', this.scrollListener);
-    removeEventListener('resize', this.handleResize);
+    // window.removeeventListener('scroll', this.scrollListener);
+    // window.removeeventListener('resize', this.handleResize);
   }
 
-  handleScroll() {
-    return debounce(() => {
-      requestAnimationFrame(() => {
-        this.setState({
-          scrollTop: document.body.scrollTop,
-        });
-      });
-    }, 20);
-  }
+  // handleScroll() {
+  //   return debounce(() => {
+  //     requestAnimationFrame(() => {
+  //       this.setState({
+  //         scrollTop: document.body.scrollTop,
+  //       });
+  //     });
+  //   }, 20);
+  // }
 
-  handlePageResize() {
-    return debounce(() => {
-      this.setHeight();
-    }, 25);
-  }
+  // handlePageResize() {
+  //   return debounce(() => {
+  //     this.setHeight();
+  //   }, 25);
+  // }
 
   setHeight() {
     const { documentElement: html, body } = document;

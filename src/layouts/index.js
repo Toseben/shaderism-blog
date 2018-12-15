@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import styled from 'styled-components';
-
-import loadWebFonts from '../services/web-fonts';
+import styled from '@emotion/styled'
 
 import Content from '../components/Content';
 import Footer from '../components/Footer';
@@ -33,12 +31,9 @@ export default class Template extends React.Component {
   }
 
   static propTypes = {
-    children: PropTypes.func,
+    children: PropTypes.node,
   };
 
-  componentDidMount() {
-    loadWebFonts();
-  }
 
   toggleMenu(isVisible) {
     this.setState({ menuActive: typeof isVisible === 'undefined' ? !this.state.menuActive : isVisible });
@@ -67,7 +62,9 @@ export default class Template extends React.Component {
                 'developer, javascript, opengl, webgl, glsl, threejs, a-frame, programming, vr, graphics, finland, helsinki',
             },
           ]}
-        />
+        >
+          <html lang="en" />
+        </Helmet>
 
         <Hamburger onClick={() => this.toggleMenu()} active={menuActive} className={'styles.hamburger'} />
 
@@ -75,7 +72,7 @@ export default class Template extends React.Component {
 
         <Header isPost={isPost} />
         <Content isPost={isPost} Footer={Footer} isWork={isWork}>
-          {children()}
+          {children}
         </Content>
       </Root>
     );

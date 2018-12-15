@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
-import styled from 'styled-components';
+import styled from '@emotion/styled'
 
 import NavigationButton from './NavigationButton';
 
-import { animateBackground, animateShake } from '../css/animations';
+// import { animateBackground, animateShake } from '../css/animations';
 
-import headerTex from '../images/background.jpg'
+// import headerTex from '../images/background.jpg'
 
 const Header = styled.header`
   height: ${props => (props.isPost ? '15vh' : '15vh')};
@@ -65,11 +65,11 @@ const Letter = styled.span`
   z-index: 3;
 `;
 
-const First = styled.span`
-  padding-right: 2vw;
-  font-weight: 700;
-  white-space: nowrap;
-`;
+// const First = styled.span`
+//   padding-right: 2vw;
+//   font-weight: 700;
+//   white-space: nowrap;
+// `;
 
 const Last = styled.span`
   font-weight: 400;

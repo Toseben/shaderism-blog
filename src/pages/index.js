@@ -1,30 +1,25 @@
-import React from 'react';
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Preview from '../components/Preview';
+import Preview from '../components/Preview'
 
-const getParams = search => {
-  return search
-    .replace('?', '')
-    .split('&')
-    .reduce((params, keyValue) => {
-      const [key, value = ''] = keyValue.split('=');
-      if (key && value) {
-        params[key] = value.match(/^\d+$/) ? +value : value;
-      }
-      return params;
-    }, {});
-};
+const getParams = (search = '') => {
+  return search.replace('?', '').split('&').reduce((params, keyValue) => {
+    const [key, value = ''] = keyValue.split('=')
+    if (key && value) {
+      params[key] = value.match(/^\d+$/) ? +value : value
+    }
+    return params
+  }, {})
+}
 
-export default function Index({ data, location }) {
-  const { edges: posts } = data.allMarkdownRemark;
-  const { start = 0, end = 10 } = getParams(location.search);
-
+export default function Index({ data, location, ...rest }) {
+  const { edges: posts } = data.allMarkdownRemark
+  const { start = 0, end = 10 } = getParams(location.search)
   return (
-    <div>
+    <React.Fragment>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
-        .filter(post => post.node.frontmatter.title !== 'Work')
-        .filter(post => post.node.frontmatter.title !== 'About')
         .slice(start, end)
         .map(({ node: post }) => {
           return (
@@ -33,13 +28,13 @@ export default function Index({ data, location }) {
                 excerpt={post.frontmatter.excerpt || post.excerpt}
                 date={post.frontmatter.date}
                 title={post.frontmatter.title}
-                to={post.frontmatter.path}
+                to={post.slug}
               />
             </div>
-          );
+          )
         })}
-    </div>
-  );
+    </React.Fragment>
+  )
 }
 
 export const pageQuery = graphql`
@@ -50,22 +45,10 @@ export const pageQuery = graphql`
         author
       }
     }
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { draft: { ne: true } } }
-    ) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, filter: { frontmatter: { draft: { ne: true } } }) {
       edges {
         node {
-          excerpt(pruneLength: 250)
-          id
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            draft
-            excerpt
-            path
-            tags
-            title
-          }
+          ...Post
         }
       }
     }

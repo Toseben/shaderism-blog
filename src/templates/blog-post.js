@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import styled from 'styled-components';
+import styled from '@emotion/styled'
+import { graphql } from 'gatsby'
 
 import Post from '../components/Post';
 import About from '../components/About';
