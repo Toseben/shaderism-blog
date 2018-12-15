@@ -104,10 +104,11 @@ export default function({
 }) {
   const isPost = (truthy, falsy = null) => {
     if (linkTo === '/') {
-      return truthy
+      return truthy;
     }
-    return falsy
-  }
+    return falsy;
+  };
+
   return (
     <Post className={[`post`].concat(className || []).join(' ')} {...rest}>
       <PostTitle title={title} to={isPost(undefined, linkTo)}>

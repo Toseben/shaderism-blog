@@ -34,7 +34,6 @@ export default class Template extends React.Component {
     children: PropTypes.node,
   };
 
-
   toggleMenu(isVisible) {
     this.setState({ menuActive: typeof isVisible === 'undefined' ? !this.state.menuActive : isVisible });
   }

@@ -1,16 +1,16 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import styled from '@emotion/styled'
-import { graphql } from 'gatsby'
+import React from "react";
+import Helmet from "react-helmet";
+import styled from "@emotion/styled";
+import { graphql } from "gatsby";
 
-import Post from '../components/Post';
-import About from '../components/About';
-import Work from '../components/Work';
-import Tags from '../components/Tags';
+import Post from "../components/Post";
+import About from "../components/About";
+import Work from "../components/Work";
+import Tags from "../components/Tags";
 
-import { fadeInBottom } from '../css/animations';
+import { fadeInBottom } from "../css/animations";
 
-import 'prismjs/themes/prism-tomorrow.css';
+import "prismjs/themes/prism-tomorrow.css";
 
 const Container = styled.div`
   max-width: 100%;
@@ -20,80 +20,30 @@ const Container = styled.div`
   animation: ${fadeInBottom} 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 `;
 
-export default function BlogPost({ data = {}, location, pathContext }) {
+export default function BlogPost({ data = {}, location, pageContext }) {
   const { markdownRemark: post } = data;
-  const { next, prev } = pathContext;
+  const { next, prev } = pageContext;
 
-  const isAbout = location.pathname.match(/about/)
-  const isWork = location.pathname.match(/work/)
+  const isAbout = location.pathname.match(/about/);
+  const isWork = location.pathname.match(/work/);
 
-  const description = post.frontmatter.excerpt
-    ? post.frontmatter.excerpt
-    : post.excerpt;
-  const image = post.frontmatter.image
-    ? post.frontmatter.image.childImageSharp.resize.src
-    : null;
+  const description = post.frontmatter.excerpt ? post.frontmatter.excerpt : post.excerpt;
+  const image = post.frontmatter.image ? post.frontmatter.image.childImageSharp.resize.src : null;
   const author = data.site.siteMetadata.author;
 
   const meta = [
-    {
-      name: `description`,
-      content: description,
-    },
-    {
-      name: `og:description`,
-      content: description,
-    },
-    {
-      name: `twitter:description`,
-      content: description,
-    },
-    {
-      name: `og:title`,
-      content: post.frontmatter.title,
-    },
-    {
-      name: `og:type`,
-      content: `article`,
-    },
-    {
-      name: `article:author`,
-      content: author,
-    },
-    {
-      name: `twitter:creator`,
-      content: `changeme`,
-    },
-    {
-      name: `author`,
-      content: author,
-    },
-    {
-      name: `twitter:label1`,
-      content: `Reading time`,
-    },
-    {
-      name: `twitter:data1`,
-      content: `${post.timeToRead} min read`,
-    },
-    {
-      name: `article:published_time`,
-      content: post.frontmatter.rawDate,
-    },
-  ].concat(
-    image
-      ? [
-          {
-            name: `og:image`,
-            content: image,
-          },
-          {
-            name: `twitter:image`,
-            content: image,
-          },
-        ]
-      : []
-  );
+    { name: `description`, content: description },
+    { name: `og:description`, content: description },
+    { name: `twitter:description`, content: description },
+    { name: `og:title`, content: post.frontmatter.title },
+    { name: `og:type`, content: `article` },
+    { name: `article:author`, content: author },
+    { name: `twitter:creator`, content: `changeme` },
+    { name: `author`, content: author },
+    { name: `twitter:label1`, content: `Reading time` },
+    { name: `twitter:data1`, content: `${post.timeToRead} min read` },
+    { name: `article:published_time`, content: post.frontmatter.rawDate }
+  ].concat(image ? [{ name: `og:image`, content: image }, { name: `twitter:image`, content: image }] : []);
 
   if (isAbout) {
     return (
@@ -103,12 +53,11 @@ export default function BlogPost({ data = {}, location, pathContext }) {
           className="blog-post"
           html={post.html}
           date={post.frontmatter.date}
-          linkTo={post.frontmatter.link || '/'}
+          linkTo={post.frontmatter.link || "/"}
           title={post.frontmatter.title}
           next={next}
           prev={prev}
-        >
-        </About>
+        />
       </Container>
     );
   }
@@ -121,12 +70,11 @@ export default function BlogPost({ data = {}, location, pathContext }) {
           className="blog-post"
           html={post.html}
           date={post.frontmatter.date}
-          linkTo={post.frontmatter.link || '/'}
+          linkTo={post.frontmatter.link || "/"}
           title={post.frontmatter.title}
           next={next}
           prev={prev}
-        >
-        </Work>
+        />
       </Container>
     );
   }
@@ -138,7 +86,7 @@ export default function BlogPost({ data = {}, location, pathContext }) {
         className="blog-post"
         html={post.html}
         date={post.frontmatter.date}
-        linkTo={post.frontmatter.link || '/'}
+        linkTo={post.frontmatter.link || "/"}
         title={post.frontmatter.title}
         next={next}
         prev={prev}

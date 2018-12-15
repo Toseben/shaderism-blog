@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled'
 
-import { FaGithub, FaFacebook, FaMailBulk } from "react-icons/fa";
+import { FaGithub, FaFacebook, FaEnvelope } from "react-icons/fa";
 
 const Container = styled.div`
   display: flex;
@@ -57,7 +57,7 @@ const Types = {
         href="mailto:shaderism@gmail.com"
         {...props}
       >
-        <FaMailBulk size={32} />
+        <FaEnvelope size={32} />
       </ExternalLink>
     );
   },
