@@ -52,6 +52,14 @@ module.exports = {
     `gatsby-plugin-sharp`,
     "gatsby-plugin-offline",
     {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Bitter"]
+        }
+      }
+    },
+    {
       resolve: "gatsby-plugin-typography",
       options: {
         omitGoogleFont: true,

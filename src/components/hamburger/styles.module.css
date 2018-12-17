@@ -1,4 +1,4 @@
-@import '../../css/variables.css';
+@import "../../css/variables.css";
 .container {
   margin: 32px;
   padding: 4px;
@@ -6,6 +6,12 @@
   top: 0;
   left: 0;
   z-index: var(--zIndexHamburger);
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    margin-left: 16px;
+  }
 }
 
 @media (--small) {
@@ -36,7 +42,7 @@
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
-  transition: .25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .icon span:nth-child(1) {

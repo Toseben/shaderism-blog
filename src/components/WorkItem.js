@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import styled from '@emotion/styled'
+import React, { Component } from "react";
+import styled from "@emotion/styled";
 // import debounce from 'lodash.debounce';
-import noiseImg from '../images/noise.png'
+import noiseImg from "../images/noise.png";
 
 const WorkItemContainer = styled.a`
   overflow: hidden;
@@ -11,9 +11,9 @@ const WorkItemContainer = styled.a`
   &:hover .overlay-wrap {
     background: rgba(186, 151, 61, 0.5) !important;
   }
-  @media only screen and (max-width : 767px) {
-    width : 100%;
-    ${'' /* .overlay-text h2 {
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+    ${"" /* .overlay-text h2 {
       font-size : calc(6px + 2vmin);
     }
 
@@ -37,7 +37,10 @@ const WorkItemContainer = styled.a`
     .overlay-wrap:hover h2,
     .overlay-wrap:hover p {
       color: #fff;
-      transition: all .4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+    .overlay-wrap {
+      background: rgba(4, 4, 4, 0.125) !important;
     }
   }
 `;
@@ -49,21 +52,21 @@ const OverlayWrap = styled.div`
   width: 100%;
   height: 100%;
   float: left;
-  background: rgba(128, 128, 128, 0.0);
-  transition: all .4s ease-in-out;
+  background: rgba(128, 128, 128, 0);
+  transition: all 0.4s ease-in-out;
   &:hover .overlay-text {
     margin-left: 2.5vw;
     opacity: 1;
   }
   &:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url(${noiseImg});
-  background-repeat: repeat;
-  background-size: 20vh;
-}
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(${noiseImg});
+    background-repeat: repeat;
+    background-size: 20vh;
+  }
 `;
 
 const OverlayText = styled.div`
@@ -76,10 +79,11 @@ const OverlayText = styled.div`
   color: #fff;
   opacity: 0;
   text-decoration: none;
-  transition: all .4s ease-in-out;
-  h2, p {
+  transition: all 0.4s ease-in-out;
+  h2,
+  p {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     line-height: 1.5;
   }
@@ -89,7 +93,12 @@ const OverlayText = styled.div`
   }
   p {
     font-size: 0.8rem;
-    font-weight: 100;
+    font-weight: 300;
+  }
+  @media only screen and (max-width: 767px) {
+    p {
+      text-shadow: 0 0 4px rgba(4, 4, 4, 0.5);
+    }
   }
 `;
 
@@ -106,13 +115,13 @@ export default class WorkItem extends Component {
     this.state = {
       mounted: false,
       scrollTop: 0,
-      scrollHeight: 0,
+      scrollHeight: 0
     };
   }
 
   componentDidMount() {
     this.setState({
-      mounted: true,
+      mounted: true
     });
     // this.scrollListener = this.handleScroll();
     // this.handleResize = this.handlePageResize();
@@ -145,13 +154,7 @@ export default class WorkItem extends Component {
     const { documentElement: html, body } = document;
 
     this.setState({
-      scrollHeight: Math.max(
-        body.scrollHeight,
-        body.offsetHeight,
-        html.clientHeight,
-        html.scrollHeight,
-        html.offsetHeight
-      ),
+      scrollHeight: Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
     });
   }
 
@@ -167,7 +170,7 @@ export default class WorkItem extends Component {
         blur = grayscale * 5;
       }
       return {
-        filter: `grayscale(${grayscale}) blur(${blur}px)`,
+        filter: `grayscale(${grayscale}) blur(${blur}px)`
       };
     }
     return {};
@@ -176,8 +179,6 @@ export default class WorkItem extends Component {
   render() {
     const { src, title, details, href } = this.props;
     const style = this.getImageStyle();
-
-    console.log(href)
 
     return (
       <WorkItemContainer target="_blank" href={href}>
