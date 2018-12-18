@@ -43,7 +43,7 @@ export default class Template extends React.Component {
     const isPost = location.pathname !== "/" && !location.pathname.match(/^\/blog\/?$/);
     const { menuActive } = this.state;
 
-    const isWork = location.pathname.match(/work/);
+    const isWork = location.pathname.match(/^\/work\/?$/);
 
     return (
       <Root>
