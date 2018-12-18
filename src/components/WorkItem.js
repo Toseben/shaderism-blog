@@ -11,6 +11,9 @@ const WorkItemContainer = styled.a`
   &:hover .overlay-wrap {
     background: rgba(186, 151, 61, 0.5) !important;
   }
+  h2 {
+    font-family: "Montserrat", "Helvetica", sans-serif !important;
+  }
   @media only screen and (max-width: 767px) {
     width: 100%;
     ${"" /* .overlay-text h2 {

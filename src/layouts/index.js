@@ -96,7 +96,7 @@ export default class Template extends React.Component {
         <Menu onNavClick={() => this.toggleMenu(false)} active={menuActive} />
 
         {isWork ? null : <Header isPost={isPost} />}
-        <Content isPost={isPost} Footer={isWork ? null : Footer} isWork={isWork} className={isWork ? 'isWork' : null}>
+        <Content isPost={isPost} Footer={isWork ? null : Footer} isWork={isWork}>
           {children}
         </Content>
       </Root>
