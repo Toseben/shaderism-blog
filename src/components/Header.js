@@ -48,7 +48,7 @@ const Name = styled.h1`
   width: auto;
   user-select: text;
   .wf-active & {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
   }
   @media only screen and (min-width: 375px) {
     font-size: 2.5rem;

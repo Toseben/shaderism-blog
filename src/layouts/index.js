@@ -44,7 +44,6 @@ export default class Template extends React.Component {
     const { menuActive } = this.state;
 
     const isWork = /^\/work\/?$/.test(location.pathname);
-    console.log(location.pathname, isWork, "isWork");
 
     return (
       <Root>
@@ -97,7 +96,7 @@ export default class Template extends React.Component {
         <Menu onNavClick={() => this.toggleMenu(false)} active={menuActive} />
 
         {isWork ? null : <Header isPost={isPost} />}
-        <Content isPost={isPost} Footer={isWork ? null : Footer} isWork={isWork}>
+        <Content isPost={isPost} Footer={isWork ? null : Footer} isWork={isWork} className={isWork ? 'isWork' : null}>
           {children}
         </Content>
       </Root>

@@ -29,7 +29,7 @@ const StyledLink = styled(Link)`
       props.title ? getColorFromString(props.title) : 'white'};
   }
   .wf-active & {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
   }
   .content {
     display: none;

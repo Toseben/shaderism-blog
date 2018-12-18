@@ -1,17 +1,23 @@
-import React from 'react';
-import styled from '@emotion/styled'
+import React from "react";
+import styled from "@emotion/styled";
 
 const Content = styled.main`
   position: absolute;
-  top: 0;
+  top: 15vh;
   right: 0;
   left: 0;
   margin: 0 auto;
-  max-width: ${props => (props.isWork ? '100vw' : '95vw')};
+  max-width: ${props => (props.isWork ? "100vw" : "95vw")};
   z-index: 2;
+  &.isWork {
+    top: 0;
+  }
   @media only screen and (min-width: 768px) {
-    max-width: ${props => (props.isWork ? '100vw' : '840px')};
-    top: ${props => (props.isWork ? '0' : '25vh')};
+    max-width: ${props => (props.isWork ? "100vw" : "840px")};
+    top: 25vh;
+    &.isWork {
+      top: 0;
+    }
   }
 `;
 
