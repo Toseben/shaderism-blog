@@ -59,6 +59,27 @@ export default class Template extends React.Component {
               name: "keywords",
               content:
                 "developer, javascript, opengl, webgl, glsl, threejs, a-frame, programming, vr, graphics, finland, helsinki"
+            },
+            {
+              name: "og:title",
+              content: "Shaderism — Blog"
+            },
+            {
+              name: "og:url",
+              content: "https://shaderism.com/"
+            },
+            {
+              name: "og:description",
+              content:
+                "Shaderism is a design studio specialized in WebGL. We create interactive websites, VR experiences and more!"
+            },
+            {
+              name: "og:image",
+              content: "https://i.ibb.co/1qMBLqx/shaderism.jpg"
+            },
+            {
+              name: "og:site_name",
+              content: "Shaderism"
             }
           ]}
         >
