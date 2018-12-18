@@ -24,8 +24,8 @@ export default function BlogPost({ data = {}, location, pageContext }) {
   const { markdownRemark: post } = data;
   const { next, prev } = pageContext;
 
-  const isAbout = location.pathname.match(/about/);
-  const isWork = location.pathname.match(/^\/work\/?$/);
+  const isAbout = /^\/about\/?$/.test(location.pathname);
+  const isWork = /^\/work\/?$/.test(location.pathname);
 
   const description = post.frontmatter.excerpt ? post.frontmatter.excerpt : post.excerpt;
   const image = post.frontmatter.image ? post.frontmatter.image.childImageSharp.resize.src : null;

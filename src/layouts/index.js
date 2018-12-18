@@ -40,10 +40,10 @@ export default class Template extends React.Component {
 
   render() {
     const { children, location } = this.props;
-    const isPost = location.pathname !== "/" && !location.pathname.match(/^\/blog\/?$/);
+    const isPost = location.pathname !== "/" && !/^\/blog\/?$/.test(location.pathname);
     const { menuActive } = this.state;
 
-    const isWork = location.pathname.match(/^\/work\/?$/);
+    const isWork = /^\/work\/?$/.test(location.pathname);
 
     return (
       <Root>
