@@ -44,6 +44,7 @@ export default class Template extends React.Component {
     const { menuActive } = this.state;
 
     const isWork = /^\/work\/?$/.test(location.pathname);
+    console.log(location.pathname, isWork, "isWork");
 
     return (
       <Root>
