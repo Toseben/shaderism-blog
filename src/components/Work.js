@@ -89,8 +89,8 @@ const Post = styled.section`
 
 const Container = styled.div`
   background-color: white;
-  max-width: 1080px;
-  margin: 0 auto;
+  max-width: 100%;
+  // margin: 0 auto;
   transform: translateY(16px) scale(.99);
   transform-origin: 50% 0;
   opacity: 0;
