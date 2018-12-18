@@ -62,7 +62,7 @@ injectGlobal`
 const Post = styled.section`
   position: relative;
   width: 100%;
-  // background-color: white;
+  background-color: rgba(0, 0, 0, 0.125);
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
   outline: 1px solid rgba(0, 0, 0, 0.125);
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
@@ -89,8 +89,8 @@ const Post = styled.section`
 
 const Container = styled.div`
   background-color: white;
-  max-width: 100%;
-  // margin: 0 auto;
+  max-width: 840px;
+  margin: 0 auto;
   transform: translateY(16px) scale(.99);
   transform-origin: 50% 0;
   opacity: 0;

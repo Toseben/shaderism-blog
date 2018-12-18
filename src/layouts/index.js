@@ -61,7 +61,7 @@ export default class Template extends React.Component {
                 "developer, javascript, opengl, webgl, glsl, threejs, a-frame, programming, vr, graphics, finland, helsinki"
             },
             {
-              'http-equiv': "Cache-control",
+              'httpEquiv': "Cache-control",
               content:
                 "public"
             },
