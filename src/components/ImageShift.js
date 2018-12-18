@@ -90,7 +90,7 @@ export default class ImageShift extends Component {
 
   render() {
     const { src } = this.props;
-    const style = this.getImageStyle();
-    return <Image className="image" src={src} style={style} onLoad={() => this.setHeight()} />;
+    // const style = this.getImageStyle();
+    return <Image className="image" src={src} onLoad={() => this.setHeight()} />;
   }
 }

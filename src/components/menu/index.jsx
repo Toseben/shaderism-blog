@@ -21,10 +21,10 @@ const Menu = ({ active, onNavClick }) => {
               <Link {...linkProps} to="/">Blog</Link>
             </li>
             <li className={styles.item}>
-              <Link {...linkProps} to="/about">About</Link>
+              <Link {...linkProps} to="/about/">About</Link>
             </li>
             <li className={styles.item}>
-              <Link {...linkProps} to="/work">Work</Link>
+              <Link {...linkProps} to="/work/">Work</Link>
             </li>
           </ul>
         </nav>
