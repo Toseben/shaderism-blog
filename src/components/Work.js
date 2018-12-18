@@ -11,7 +11,7 @@ import WorkItem from '../components/WorkItem'
 import envportal from '../images/work/envportal.jpg'
 import buy from '../images/work/buy.jpg'
 import particles from '../images/work/particles.jpg'
-import spinningglobe from '../images/work/spinningglobe.jpg'
+import popupmockup from "../images/work/popupmockup.jpg";
 import bankvis from '../images/work/bankvis.jpg'
 
 import ikea from '../images/work/ikea_tshirt.jpg'
@@ -62,7 +62,7 @@ injectGlobal`
 const Post = styled.section`
   position: relative;
   width: 100%;
-  background-color: white;
+  // background-color: white;
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
   outline: 1px solid rgba(0, 0, 0, 0.125);
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
@@ -89,7 +89,8 @@ const Post = styled.section`
 
 const Container = styled.div`
   background-color: white;
-  max-width: 100%;
+  max-width: 1080px;
+  margin: auto;
   transform: translateY(16px) scale(.99);
   transform-origin: 50% 0;
   opacity: 0;
@@ -148,10 +149,10 @@ export default function({
             href="https://www.youtube.com/embed/GQsU_2p4atU?rel=0&autoplay=1"
           />
 
-          <WorkItem src={buy}
-            title='3D Store'
-            details='Interactive Product'
-            href="http://arttukoskela.com/store/"
+          <WorkItem src={popupmockup}
+            title='Popup Mockup'
+            details='Interactive Card Generator'
+            href="https://popupmockup.com/share/helloworld"
           />
 
           <WorkItem src={candycrush}
@@ -160,10 +161,10 @@ export default function({
             href="https://www.youtube.com/embed/9IEHWYEB-2o?rel=0&autoplay=1"
           />
 
-          <WorkItem src={spinningglobe}
-            title='Spinning Globe'
-            details='Data Visualization'
-            href="http://arttukoskela.com/globe/"
+          <WorkItem src={buy}
+            title='3D Store'
+            details='Interactive Product'
+            href="http://arttukoskela.com/store/"
           />
 
           <WorkItem src={ferrero}

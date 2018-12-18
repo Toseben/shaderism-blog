@@ -7,11 +7,12 @@ import { fadeInBottom } from '../css/animations'
 
 import ImageShift from '../components/ImageShift'
 
-import annix from '../images/clients/annix.png'
+// import annix from '../images/clients/annix.png'
 import ekkomedia from '../images/clients/ekkomedia.png'
 import flow314 from '../images/clients/flow314.png'
 import ivar from '../images/clients/ivar.png'
-import jms from '../images/clients/jms.png'
+import jms from "../images/clients/jms.png";
+import modulor from "../images/clients/modulor.png";
 import pupil from '../images/clients/pupil.png'
 import signlab from '../images/clients/signlab.png'
 import vividly from '../images/clients/vividly.png'
@@ -139,11 +140,11 @@ export default function({
       <Container>
         <h1 className="clients">Clients & Partners</h1>
         <ImageContainer>
-          <Image src={annix} />
           <Image src={ekkomedia} />
           <Image src={flow314} />
           <Image src={ivar} />
           <Image src={jms} />
+          <Image src={modulor} />
           <Image src={pupil} />
           <Image src={signlab} />
           <Image src={vividly} />
