@@ -48,7 +48,7 @@ export default class Template extends React.Component {
     return (
       <Root>
         <Helmet
-          title="Shaderism - Blog"
+          title="Shaderism — Blog"
           meta={[
             {
               name: "description",

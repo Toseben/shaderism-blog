@@ -38,7 +38,7 @@ export default function BlogPost({ data = {}, location, pageContext }) {
     { name: `og:title`, content: post.frontmatter.title },
     { name: `og:type`, content: `article` },
     { name: `article:author`, content: author },
-    { name: `twitter:creator`, content: `changeme` },
+    { name: `twitter:creator`, content: author },
     { name: `author`, content: author },
     { name: `twitter:label1`, content: `Reading time` },
     { name: `twitter:data1`, content: `${post.timeToRead} min read` },
@@ -48,7 +48,7 @@ export default function BlogPost({ data = {}, location, pageContext }) {
   if (isAbout) {
     return (
       <Container>
-        <Helmet title={`Shaderism - ${post.frontmatter.title}`} meta={meta} />
+        <Helmet title={`Shaderism — ${post.frontmatter.title}`} meta={meta} />
         <About
           className="blog-post"
           html={post.html}
@@ -65,7 +65,7 @@ export default function BlogPost({ data = {}, location, pageContext }) {
   if (isWork) {
     return (
       <Container>
-        <Helmet title={`Shaderism - ${post.frontmatter.title}`} meta={meta} />
+        <Helmet title={`Shaderism — ${post.frontmatter.title}`} meta={meta} />
         <Work
           className="blog-post"
           html={post.html}
@@ -81,7 +81,7 @@ export default function BlogPost({ data = {}, location, pageContext }) {
 
   return (
     <Container>
-      <Helmet title={`Shaderism - ${post.frontmatter.title}`} meta={meta} />
+      <Helmet title={`Shaderism — ${post.frontmatter.title}`} meta={meta} />
       <Post
         className="blog-post"
         html={post.html}
