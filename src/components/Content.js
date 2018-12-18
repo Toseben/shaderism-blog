@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 
 const Content = styled.main`
   position: absolute;
-  top: ${props => (props.isWork ? '0' : '15vh')};
+  top: 0;
   right: 0;
   left: 0;
   margin: 0 auto;
