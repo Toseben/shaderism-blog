@@ -14,11 +14,10 @@ draft: false
 ---
 
 # _Back to the Future: The Marriage of React and Three.js_
-
-Running multiple instances of Three.js (or [HTML5 Canvas][HTML5 Canvas] elements if you're more familiar that term) can get rather heavy for our sweet little processors. Luckily there's a better way when all you want to do is render multiple views of different objects side by side on the same page! Also as an added bonus, tonight we'll be looking at how to marry [React][React] and Three.js together without getting [a massive headache][Wat]...
+Running many instances of Three.js (or [HTML5 Canvas][HTML5 Canvas] elements if you're more familiar that term) can get rather heavy for our sweet little processors. Luckily there's a better way if all you want to do is render many views of different objects side by side on the same page! Also as an added bonus, tonight we'll be looking at how to marry [React][React] and Three.js together without getting [a massive headache][Wat]...
 
 ## **Create React App**
-Seems like the title gave it all up! There's various boilerplates and other manual ways of getting started with React, but the easiest way is by using [create-react-app script][create-react-app] developed by none other than **Facebook**.
+Seems like the title gave it all up! There are various boilerplates and other manual ways of getting started with React. But the easiest way is by using [create-react-app script][create-react-app] developed by none other than **Facebook**.
 
 All we need to do is install the script and run it! The `-g` flag stands for a global install.
 ```bash
@@ -27,7 +26,7 @@ create-react-app react-threejs-project
 ```
 
 ### Quick Housekeeping
-Running the script already takes us half way there and we're ready to start customising the project. The core component at `./src/App.js` is the first to be modified. It can stay mostly as it is, all we want to change is to render our View component instead.
+Running the script takes us halfway there and we're ready to start customizing the project. The core component at `./src/App.js` is the first for modifying. It can stay as it is, all we want to change is to render our View component instead.
 
 ```javascript{}
 import View from "./components/View";
@@ -37,7 +36,7 @@ import View from "./components/View";
 </div>
 ```
 ### Summoning Our Magic Window
-The first hints of **black magic** are starting to appear at our View component. Graphics is not a React component, but a JavaScript class! Which means that all of our Three.js code is being run outside of React components.
+The first hints of **black magic** are starting to appear at our View component. Graphics is not a React component, but a JavaScript class! Which means that all our Three.js code is being run outside of React components.
 ```javascript{5-7}
 import React, { Component } from "react";
 import Graphics from "./Graphics";
@@ -54,7 +53,7 @@ export default class View extends Component {
 ```
 
 ### What Happens in Three.js...
-Below is the minimal version of our `Graphics.js`, which will be where we bring together everything related to 3D in this project. For now all we're doing is initiating the scene and starting animation with [requestAnimationFrame][requestAnimationFrame]. Another great option for controlling FPS (the heartbeat of our animation) is [TweenMax][TweenMax]!
+Below is the minimal version of our `Graphics.js`. It will be where we bring together everything related to 3D in this project. For now, all we're doing is initiating the scene and starting the animation with [requestAnimationFrame][requestAnimationFrame]. Another great option for controlling FPS (the heartbeat of our animation) is [TweenMax][TweenMax]!
 ```javascript{5-9}
 import SceneObj from "./Scene";
 
@@ -78,7 +77,7 @@ export default class Graphics {
 ```
 
 ### ...Stays in Three.js!
-To make life complicated there's always many ways of doing simple tasks. Here we see two ways of importing functions from Three.js library. We can either manually request the one's we need or request all of them at once! The only difference in use will be writing `new THREE.Scene()` rather than `new Scene()` when using **the wildcard** `*`
+To make life complicated there are always many ways of doing simple tasks. Here we see two ways of importing functions from Three.js library. We can either request which we need or request all them at once! The only difference in use will be writing `new THREE.Scene()` rather than `new Scene()` when using **the wildcard** `*`
 ```javascript{}
 // Import with this
 import { Scene, WebGLRenderer, PerspectiveCamera } from "three";
@@ -106,7 +105,7 @@ export default class SceneObj extends Scene {
 ```
 
 ## **Where's My Multiple Views Though...?**
-But hold on we wanted more than one view, like [a windowpane][windowpane]! Let's head back to `App.js` for initial data setup. In this example the data is static but it could be coming from a server to be dynamic just as well! The data is generated in the constructor and then passed in to the [React State][React State]. From there our component can access it through [props][React Props]!
+But hold on we wanted more than one view, like [a windowpane][windowpane]! Let's head back to `App.js` for initial data setup. In this example the data is static but it could be coming from a server to be dynamic as well! The data is generated in the constructor and then passed into the [React State][React State]. From there, our component can access it through [props][React Props]!
 
 ```javascript{13-21}
 // How many views in each side
@@ -137,7 +136,7 @@ for (let i = 0; i < viewPow2; i++) {
 <View id="viewContainer" views={viewArray} viewCount={viewPow2} />
 ```
 
-Just a tiny bit more of black magic and we have an ugly **but** working prototype on our hands! `Scene.js` is where the majority of changes take place. For every view we'll be creating a new camera, luckily they're dirt cheap compared to [the real ones!][Camera Rig] Then rather than calling `renderer.render()` only once, no surprises here, we call it for every view. But because we don't want to render the same image multiple times we need to update some [parameters][Three.js Scissor] each time!
+A tiny bit more of black magic and we have an ugly **but** working prototype on our hands! `Scene.js` is where the majority of changes take place. For every view we'll be creating a new camera, luckily they're dirt cheap compared to [the real ones!][Camera Rig] Then rather than calling `renderer.render()` only once, no surprises here, we call it for every view. But because we don't want to render the same image many times we need to update some [parameters][Three.js Scissor] each time!
 ```javascript{17-21}
 for (let i = 0; i < options.viewCount; i++) {
   const view = options.views[i];
@@ -171,7 +170,7 @@ render() {
 ```
 
 ### Finally Some Results!
-All our hard work has paid off and we've got something on the canvas. It looked a bit too much like a checkerboard before I added some beautiful spheres in the scene. One thing to remember is we're not rendering one sphere, but multiple different spheres which have been offset in the same fashion as our cameras!
+All our hard work has paid off and we've got something on the canvas. It looked a bit too much like a checkerboard before I added some beautiful spheres in the scene. One thing to remember is we're not rendering one sphere. But many different spheres which have been offset in the same fashion as our cameras!
 
 ![0](./media/multiview-spheres.jpg)
 
@@ -179,10 +178,10 @@ At this point we're done with the technicalities but... it looks a bit dull. **L
 
 ## **Done, but...**
 ### Let's Fix Colors
-This step is already done! However here's couple of links for generating a pleasent looking color schemes quickly. First of I usually pick one or two colors from [Flat UI][FlatUIColors]. Then bring those color values over to [Material Design Color Tool][Material Design Color Tool] to get complimenting shades and font information!
+This step is already done! But here's a couple of links for generating a pleasant looking color schemes. First of I usually pick one or two colors from [Flat UI][FlatUIColors]. Then bring the color values over to [Material Design Color Tool][Material Design Color Tool] to get complimenting shades and fonts!
 
 ### Let's Fix Fonts
-Looking at perfectly round spheres gets boring so I thought 3D alphabets would fit this procedural example perfectly. Three.js has built in [TextGeometry][TextGeometry] which takes care of all the heavy lifting. Also it's really easy to use any custom fonts with it by first loading eg. from [Google Fonts][Google Fonts] and then converting it to *.json* file with [Facetype.js][Facetype.js].
+Looking at perfectly round spheres gets boring so I thought 3D alphabets would fit this procedural example. Three.js has built-in [TextGeometry][TextGeometry] which takes care of all the heavy lifting. Also, it's easy to use any custom fonts with it by first loading eg. from [Google Fonts][Google Fonts] and then converting it to *.json* file with [Facetype.js][Facetype.js].
 
 You can then load the font in `./src/components/Graphics.js` and generate geometry from it!
 
@@ -232,7 +231,7 @@ export default class Text extends THREE.Object3D {
 ![1](./multiview.jpg)
 
 ## **Highlight, Rotate, Dynamic**
-To make things visually bit more interesting I've added **setInterval()** to highlight one letter at a time. By changing the value `viewSideCount` we're able to quickly generate a new canvas which is filled by desired amount of letters!
+To make things visually bit more interesting I've added **setInterval()** to highlight one letter at a time. By changing the value `viewSideCount` we're able to generate a new canvas which is filled by the desired amount of letters!
 
 <div style="overflow: hidden">
 <video style="width: 100%" playsinline autoplay loop muted class="responsive">
