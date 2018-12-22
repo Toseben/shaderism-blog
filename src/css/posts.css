@@ -39,6 +39,7 @@
  */
 .gatsby-resp-image-wrapper {
   z-index: 1 !important;
+  max-width: 100% !important;
 }
 
 .wf-active .post h1 {
@@ -74,7 +75,7 @@
 }
 
 .post-content a:hover {
-  background-color: rgba(216, 93, 21, 0.05);
+  /* background-color: rgba(216, 93, 21, 0.05); */
 }
 
 .post-content a:after {

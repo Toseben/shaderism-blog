@@ -204,7 +204,7 @@ let minDistance = distanceArray[idxSmallest];
 this.dof.bokeh_uniforms[ 'focalDepth' ].value = minDistance;
 ```
 
-## And that's it for today folks!
+## **And that's it for today folks!**
 Quite a journey, but we hope you enjoyed reading through it!
 
 <div style="overflow: hidden">
