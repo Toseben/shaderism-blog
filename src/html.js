@@ -17,6 +17,7 @@ export default class HTML extends React.Component {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta httpEquiv="Cache-control" content="public" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="google-site-verification" content="9uMdelCsHAECNkyYHY-tMO3tyME2TzQe_O1lZ8USN5g" />
           {this.props.headComponents}
         </head>
         <body>
