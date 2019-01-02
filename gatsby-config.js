@@ -2,7 +2,8 @@ module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
     title: `Shaderism`,
-    author: `Arttu Koskela`
+    author: `Arttu Koskela`,
+    siteUrl: `https://www.shaderism.com`
   },
   plugins: [
     {
@@ -51,6 +52,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     "gatsby-plugin-offline",
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
