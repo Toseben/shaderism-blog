@@ -149,10 +149,10 @@ export default function({
             href="https://www.youtube.com/embed/GQsU_2p4atU?rel=0&autoplay=1"
           />
 
-          <WorkItem src={popupmockup}
-            title='Popup Mockup'
-            details='Interactive Card Generator'
-            href="https://popupmockup.com/share/helloworld"
+          <WorkItem src={modulor}
+            title='Furniture Store'
+            details='Interactive Product'
+            href="https://www.modulor.de/tische/konfigurator-tisch-y/?setup=state:configure,size:1600x800,tableTop:linoleum,panelHeight:20,panelHeightM:19,surfaceColorL:violetgrey,edgeL:multiplex90,edgeBandL:multiplex90,tableCoreL:multiplex90,tableEdgeBevel:90,radius:50mm,surfaceColorM:whitepearl,edgeM:multiplex_birke,edgeMWood:multiplex_birke,edgeMPlastic:,tableLeg:rs20,tableLeg75:rs20,tableLeg100:null,height:75,tableLegColor:black,tableLegColorDefault:black,tableLegColorSpecial:,tableLegColorType:Default,zarge:650,verbinder:y,tableLegWood:ash_tree_whitened,cableOutlet:noEdging,cableOutletType:noEdging,cableOutletPosition:90x90"
           />
 
           <WorkItem src={candycrush}
@@ -161,10 +161,10 @@ export default function({
             href="https://www.youtube.com/embed/9IEHWYEB-2o?rel=0&autoplay=1"
           />
 
-          <WorkItem src={modulor}
-            title='Furniture Store'
-            details='Interactive Product'
-            href="https://www.modulor.de/tische/konfigurator-tisch-y/?setup=state:configure,size:1600x800,tableTop:linoleum,panelHeight:20,panelHeightM:19,surfaceColorL:violetgrey,edgeL:multiplex90,edgeBandL:multiplex90,tableCoreL:multiplex90,tableEdgeBevel:90,radius:50mm,surfaceColorM:whitepearl,edgeM:multiplex_birke,edgeMWood:multiplex_birke,edgeMPlastic:,tableLeg:rs20,tableLeg75:rs20,tableLeg100:null,height:75,tableLegColor:black,tableLegColorDefault:black,tableLegColorSpecial:,tableLegColorType:Default,zarge:650,verbinder:y,tableLegWood:ash_tree_whitened,cableOutlet:noEdging,cableOutletType:noEdging,cableOutletPosition:90x90"
+          <WorkItem src={popupmockup}
+            title='Popup Mockup'
+            details='Interactive Card Generator'
+            href="https://popupmockup.com/share/helloworld"
           />
 
           <WorkItem src={ferrero}
