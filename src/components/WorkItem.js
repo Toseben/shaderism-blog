@@ -195,7 +195,7 @@ export default class WorkItem extends Component {
     return (
       <WorkItemContainer target="_blank" href={href}>
         {filename !== 'mp4' && <Image src={src} style={style} imgScale={imgScale} onLoad={() => this.setHeight()} />}
-        {filename === 'mp4' && <Video autoPlay src={src} style={style} imgScale={imgScale} onLoad={() => this.setHeight()} />}
+        {filename === 'mp4' && <Video autoPlay loop src={src} style={style} imgScale={imgScale} onLoad={() => this.setHeight()} />}
         <OverlayWrap className="overlay-wrap">
           <OverlayText className="overlay-text">
             <h2>{title}</h2>
