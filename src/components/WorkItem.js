@@ -106,6 +106,14 @@ const OverlayText = styled.div`
 `;
 
 const Image = styled.img`
+  transform: scale(1, ${props => props.imgScale});
+  width: 100%;
+  float: left;
+  margin: 0;
+`;
+
+const Video = styled.video`
+  transform: scale(1, ${props => props.imgScale});
   width: 100%;
   float: left;
   margin: 0;
@@ -180,12 +188,14 @@ export default class WorkItem extends Component {
   }
 
   render() {
-    const { src, title, details, href } = this.props;
+    const { src, title, details, href, imgScale = "1" } = this.props;
     const style = this.getImageStyle();
+    const filename = src.split('.').pop()
 
     return (
       <WorkItemContainer target="_blank" href={href}>
-        <Image src={src} style={style} onLoad={() => this.setHeight()} />
+        {filename !== 'mp4' && <Image src={src} style={style} imgScale={imgScale} onLoad={() => this.setHeight()} />}
+        {filename === 'mp4' && <Video autoPlay src={src} style={style} imgScale={imgScale} onLoad={() => this.setHeight()} />}
         <OverlayWrap className="overlay-wrap">
           <OverlayText className="overlay-text">
             <h2>{title}</h2>

@@ -11,7 +11,7 @@ import WorkItem from '../components/WorkItem'
 import envportal from '../images/work/envportal.jpg'
 import modulor from '../images/work/modulor.jpg'
 import particles from '../images/work/particles.jpg'
-import popupmockup from "../images/work/popupmockup.jpg";
+import spotifyDataviz from "../images/work/spotifyDataviz.mp4";
 import bankvis from '../images/work/bankvis.jpg'
 
 import ikea from '../images/work/ikea_tshirt.jpg'
@@ -161,10 +161,11 @@ export default function({
             href="https://www.youtube.com/embed/9IEHWYEB-2o?rel=0&autoplay=1"
           />
 
-          <WorkItem src={popupmockup}
-            title='Popup Mockup'
-            details='Interactive Card Generator'
-            href="https://popupmockup.com/share/helloworld"
+          <WorkItem src={spotifyDataviz}
+            title='Spotify Data Vis'
+            details='Interactive Playlist Visualiser'
+            href="https://spotify-dataviz.herokuapp.com/"
+            imgScale="1.15"
           />
 
           <WorkItem src={ferrero}
