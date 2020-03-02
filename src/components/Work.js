@@ -10,7 +10,7 @@ import WorkItem from '../components/WorkItem'
 
 import envportal from '../images/work/envportal.jpg'
 import modulor from '../images/work/modulor.jpg'
-import particles from '../images/work/particles.jpg'
+import audioReactive from '../images/work/audioReactive.mp4'
 import spotifyDataviz from "../images/work/spotifyDataviz.mp4";
 import bankvis from '../images/work/bankvis.jpg'
 
@@ -137,11 +137,17 @@ export default function({
       <Container>
         <ImageContainer>
 
-          <WorkItem src={particles}
+          <WorkItem src={modulor}
+            title='Furniture Store'
+            details='Interactive Product'
+            href="https://www.modulor.de/tische/konfigurator-tisch-y/?setup=state:configure,size:1600x800,tableTop:linoleum,panelHeight:20,panelHeightM:19,surfaceColorL:violetgrey,edgeL:multiplex90,edgeBandL:multiplex90,tableCoreL:multiplex90,tableEdgeBevel:90,radius:50mm,surfaceColorM:whitepearl,edgeM:multiplex_birke,edgeMWood:multiplex_birke,edgeMPlastic:,tableLeg:rs20,tableLeg75:rs20,tableLeg100:null,height:75,tableLegColor:black,tableLegColorDefault:black,tableLegColorSpecial:,tableLegColorType:Default,zarge:650,verbinder:y,tableLegWood:ash_tree_whitened,cableOutlet:noEdging,cableOutletType:noEdging,cableOutletPosition:90x90"
+          />
+
+          {/* <WorkItem src={particles}
             title='Particles & Shaders'
             details='Interactive Particles'
             href="http://arttukoskela.com/particles/"
-          />
+          /> */}
 
           <WorkItem src={ikea}
             title='IKEA'
@@ -149,10 +155,11 @@ export default function({
             href="https://www.youtube.com/embed/GQsU_2p4atU?rel=0&autoplay=1"
           />
 
-          <WorkItem src={modulor}
-            title='Furniture Store'
-            details='Interactive Product'
-            href="https://www.modulor.de/tische/konfigurator-tisch-y/?setup=state:configure,size:1600x800,tableTop:linoleum,panelHeight:20,panelHeightM:19,surfaceColorL:violetgrey,edgeL:multiplex90,edgeBandL:multiplex90,tableCoreL:multiplex90,tableEdgeBevel:90,radius:50mm,surfaceColorM:whitepearl,edgeM:multiplex_birke,edgeMWood:multiplex_birke,edgeMPlastic:,tableLeg:rs20,tableLeg75:rs20,tableLeg100:null,height:75,tableLegColor:black,tableLegColorDefault:black,tableLegColorSpecial:,tableLegColorType:Default,zarge:650,verbinder:y,tableLegWood:ash_tree_whitened,cableOutlet:noEdging,cableOutletType:noEdging,cableOutletPosition:90x90"
+          <WorkItem src={spotifyDataviz}
+            title='Spotify Data Vis'
+            details='Interactive Playlist Visualiser'
+            href="https://spotify-dataviz.herokuapp.com/"
+            imgScale="1.2"
           />
 
           <WorkItem src={candycrush}
@@ -161,10 +168,10 @@ export default function({
             href="https://www.youtube.com/embed/9IEHWYEB-2o?rel=0&autoplay=1"
           />
 
-          <WorkItem src={spotifyDataviz}
-            title='Spotify Data Vis'
-            details='Interactive Playlist Visualiser'
-            href="https://spotify-dataviz.herokuapp.com/"
+          <WorkItem src={audioReactive}
+            title='Audio Reactive'
+            details='Interactive Music Visualiser'
+            href="https://audio-reactive-animations.netlify.com/"
             imgScale="1.15"
           />
 
