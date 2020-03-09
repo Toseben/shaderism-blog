@@ -10,8 +10,10 @@ import WorkItem from '../components/WorkItem'
 
 import envportal from '../images/work/envportal.jpg'
 import modulor from '../images/work/modulor.jpg'
-import audioReactive from '../images/work/audioReactive.mp4'
-import spotifyDataviz from "../images/work/spotifyDataviz.mp4";
+import audioReactive from '../images/work/audioReactive.jpg'
+import audioReactive_mp4 from '../images/work/audioReactive.mp4'
+import spotifyDataviz from "../images/work/spotifyDataviz.jpg";
+import spotifyDataviz_mp4 from "../images/work/spotifyDataviz.mp4";
 import bankvis from '../images/work/bankvis.jpg'
 
 import ikea from '../images/work/ikea_tshirt.jpg'
@@ -21,6 +23,7 @@ import mclaren from '../images/work/mclaren.jpg'
 import ferrero from '../images/work/ferrero.jpg'
 
 import '../css/posts.css';
+const isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
 
 injectGlobal`
   h1.post-title {
@@ -155,11 +158,11 @@ export default function({
             href="https://www.youtube.com/embed/GQsU_2p4atU?rel=0&autoplay=1"
           />
 
-          <WorkItem src={spotifyDataviz}
+          <WorkItem src={isMobile ? spotifyDataviz : spotifyDataviz_mp4}
             title='Spotify Data Vis'
             details='Interactive Playlist Visualiser'
             href="https://spotify-dataviz.herokuapp.com/"
-            imgScale="1.2"
+            imgScale={isMobile ? 1 : 1.2}
           />
 
           <WorkItem src={candycrush}
@@ -168,11 +171,11 @@ export default function({
             href="https://www.youtube.com/embed/9IEHWYEB-2o?rel=0&autoplay=1"
           />
 
-          <WorkItem src={audioReactive}
+          <WorkItem src={isMobile ? audioReactive : audioReactive_mp4}
             title='Audio Reactive'
             details='Interactive Music Visualiser'
             href="https://audio-reactive-animations.netlify.com/"
-            imgScale="1.15"
+            imgScale={isMobile ? 1 : 1.15}
           />
 
           <WorkItem src={ferrero}
