@@ -8,12 +8,11 @@ import { fadeInBottom } from '../css/animations'
 // import ImageShift from '../components/ImageShift'
 import WorkItem from '../components/WorkItem'
 
-import envportal from '../images/work/envportal.jpg'
-import modulor from '../images/work/modulor.jpg'
-import audioReactive from '../images/work/audioReactive.jpg'
-import audioReactive_mp4 from '../images/work/audioReactive.mp4'
-import spotifyDataviz from "../images/work/spotifyDataviz.jpg";
-import spotifyDataviz_mp4 from "../images/work/spotifyDataviz.mp4";
+// import envportal from '../images/work/envportal.jpg'
+import storyboarder from '../images/work/storyboarder.mp4'
+import modulor from '../images/work/modulor.mp4'
+import audioReactive from '../images/work/audioReactive.mp4'
+import spotifyDataviz from "../images/work/spotifyDataviz.mp4";
 import bankvis from '../images/work/bankvis.jpg'
 
 import ikea from '../images/work/ikea_tshirt.jpg'
@@ -23,7 +22,6 @@ import mclaren from '../images/work/mclaren.jpg'
 import ferrero from '../images/work/ferrero.jpg'
 
 import '../css/posts.css';
-const isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
 
 injectGlobal`
   h1.post-title {
@@ -140,10 +138,11 @@ export default function({
       <Container>
         <ImageContainer>
 
-          <WorkItem src={modulor}
-            title='Furniture Store'
-            details='Interactive Product'
-            href="https://www.modulor.de/tische/konfigurator-tisch-y/?setup=state:configure,size:1600x800,tableTop:linoleum,panelHeight:20,panelHeightM:19,surfaceColorL:violetgrey,edgeL:multiplex90,edgeBandL:multiplex90,tableCoreL:multiplex90,tableEdgeBevel:90,radius:50mm,surfaceColorM:whitepearl,edgeM:multiplex_birke,edgeMWood:multiplex_birke,edgeMPlastic:,tableLeg:rs20,tableLeg75:rs20,tableLeg100:null,height:75,tableLegColor:black,tableLegColorDefault:black,tableLegColorSpecial:,tableLegColorType:Default,zarge:650,verbinder:y,tableLegWood:ash_tree_whitened,cableOutlet:noEdging,cableOutletType:noEdging,cableOutletPosition:90x90"
+          <WorkItem src={audioReactive}
+            title='Audio Reactive'
+            details='Interactive Music Visualiser'
+            href="https://audio-reactive-animations.netlify.com/"
+            imgScale={1.15}
           />
 
           {/* <WorkItem src={particles}
@@ -158,11 +157,10 @@ export default function({
             href="https://www.youtube.com/embed/GQsU_2p4atU?rel=0&autoplay=1"
           />
 
-          <WorkItem src={isMobile ? spotifyDataviz : spotifyDataviz_mp4}
-            title='Spotify Data Vis'
-            details='Interactive Playlist Visualiser'
-            href="https://spotify-dataviz.herokuapp.com/"
-            imgScale={isMobile ? 1 : 1.2}
+          <WorkItem src={storyboarder}
+            title='Storyboarder'
+            details='The best way to visualize your story'
+            href="https://youtu.be/UITowIxaC3o"
           />
 
           <WorkItem src={candycrush}
@@ -171,11 +169,11 @@ export default function({
             href="https://www.youtube.com/embed/9IEHWYEB-2o?rel=0&autoplay=1"
           />
 
-          <WorkItem src={isMobile ? audioReactive : audioReactive_mp4}
-            title='Audio Reactive'
-            details='Interactive Music Visualiser'
-            href="https://audio-reactive-animations.netlify.com/"
-            imgScale={isMobile ? 1 : 1.15}
+          <WorkItem src={spotifyDataviz}
+            title='Spotify Data Vis'
+            details='Interactive Playlist Visualiser'
+            href="https://spotify-dataviz.herokuapp.com/"
+            imgScale={1.2}
           />
 
           <WorkItem src={ferrero}
@@ -184,10 +182,17 @@ export default function({
             href="https://vimeo.com/113725194?autoplay=1"
           />
 
-          <WorkItem src={envportal}
+          {/* <WorkItem src={envportal}
             title='Virtual House Tour'
             details='Interactive VR Experience'
             href="http://arttukoskela.com/tour/"
+          /> */}
+
+          <WorkItem src={modulor}
+            title='Furniture Store'
+            details='Interactive Product'
+            href="https://www.modulor.de/tische/konfigurator-tisch-y/?setup=state:configure,size:1600x800,tableTop:linoleum,panelHeight:20,panelHeightM:19,surfaceColorL:violetgrey,edgeL:multiplex90,edgeBandL:multiplex90,tableCoreL:multiplex90,tableEdgeBevel:90,radius:50mm,surfaceColorM:whitepearl,edgeM:multiplex_birke,edgeMWood:multiplex_birke,edgeMPlastic:,tableLeg:rs20,tableLeg75:rs20,tableLeg100:null,height:75,tableLegColor:black,tableLegColorDefault:black,tableLegColorSpecial:,tableLegColorType:Default,zarge:650,verbinder:y,tableLegWood:ash_tree_whitened,cableOutlet:noEdging,cableOutletType:noEdging,cableOutletPosition:90x90"
+            imgScale={1.0}
           />
 
           <WorkItem src={johnlewis}

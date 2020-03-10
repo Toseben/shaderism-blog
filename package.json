@@ -70,6 +70,7 @@
     "develop": "npm run start",
     "preserve": "gatsby build",
     "serve": "gatsby serve",
-    "start": "cross-env NODE_ENV=development gatsby develop --open"
+    "start": "cross-env NODE_ENV=development gatsby develop --open",
+    "start-m": "cross-env NODE_ENV=development gatsby develop -H 192.168.1.211 -p 8000"
   }
 }
