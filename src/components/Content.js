@@ -19,7 +19,8 @@ const Content = styled.main`
 `;
 
 function MainContent({ children, Footer, ...rest }) {
-  const isWork = /^\/work\/?$/.test(location.pathname);
+  const url = typeof window !== 'undefined' ? window.location.href : '';
+  const isWork = /^\work\/?$/.test(url.split('/').pop());
 
   return (
     <Content {...rest} hackIsWork={isWork}>
