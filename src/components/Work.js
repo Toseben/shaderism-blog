@@ -13,7 +13,8 @@ import storyboarder from '../images/work/storyboarder.mp4'
 import modulor from '../images/work/modulor.mp4'
 import audioReactive from '../images/work/audioReactive.mp4'
 import spotifyDataviz from "../images/work/spotifyDataviz.mp4";
-import bankvis from '../images/work/bankvis.jpg'
+import virtualShopping from "../images/work/virtualShopping.mp4";
+// import bankvis from '../images/work/bankvis.jpg'
 
 import ikea from '../images/work/ikea_tshirt.jpg'
 import johnlewis from '../images/work/johnlewis.jpg'
@@ -141,7 +142,7 @@ export default function({
           <WorkItem src={audioReactive}
             title='Audio Reactive'
             details='Interactive Music Visualiser'
-            href="https://audio-reactive-animations.netlify.com/"
+            href="https://audio-reactive-animations.netlify.app/"
             imgScale={1.15}
           />
 
@@ -169,11 +170,11 @@ export default function({
             href="https://www.youtube.com/embed/9IEHWYEB-2o?rel=0&autoplay=1"
           />
 
-          <WorkItem src={spotifyDataviz}
-            title='Spotify Data Vis'
-            details='Interactive Playlist Visualiser'
-            href="https://spotify-dataviz.herokuapp.com/"
-            imgScale={1.2}
+          <WorkItem src={virtualShopping}
+            title='Virtual Shopping'
+            details='Interactive Multiuser Ecommerce'
+            href="http://virtual-shopping.netlify.app/"
+            imgScale={1.15}
           />
 
           <WorkItem src={ferrero}
@@ -188,11 +189,11 @@ export default function({
             href="http://arttukoskela.com/tour/"
           /> */}
 
-          <WorkItem src={modulor}
-            title='Furniture Store'
-            details='Interactive Product'
-            href="https://www.modulor.de/tische/konfigurator-tisch-y/?setup=state:configure,size:1600x800,tableTop:linoleum,panelHeight:20,panelHeightM:19,surfaceColorL:violetgrey,edgeL:multiplex90,edgeBandL:multiplex90,tableCoreL:multiplex90,tableEdgeBevel:90,radius:50mm,surfaceColorM:whitepearl,edgeM:multiplex_birke,edgeMWood:multiplex_birke,edgeMPlastic:,tableLeg:rs20,tableLeg75:rs20,tableLeg100:null,height:75,tableLegColor:black,tableLegColorDefault:black,tableLegColorSpecial:,tableLegColorType:Default,zarge:650,verbinder:y,tableLegWood:ash_tree_whitened,cableOutlet:noEdging,cableOutletType:noEdging,cableOutletPosition:90x90"
-            imgScale={1.0}
+          <WorkItem src={spotifyDataviz}
+            title='Spotify Data Vis'
+            details='Interactive Playlist Visualiser'
+            href="https://spotify-dataviz.herokuapp.com/"
+            imgScale={1.2}
           />
 
           <WorkItem src={johnlewis}
@@ -201,10 +202,11 @@ export default function({
             href="https://www.youtube.com/embed/4qo27xcVS5I?rel=0&autoplay=1"
           />
 
-          <WorkItem src={bankvis}
-            title='3D Interior Design'
-            details='Interactive VR Experience'
-            href="https://toseben.github.io/interactive_webViz/"
+          <WorkItem src={modulor}
+            title='Furniture Store'
+            details='Interactive Product'
+            href="https://www.modulor.de/tische/konfigurator-tisch-y/?setup=state:configure,size:1600x800,tableTop:linoleum,panelHeight:20,panelHeightM:19,surfaceColorL:violetgrey,edgeL:multiplex90,edgeBandL:multiplex90,tableCoreL:multiplex90,tableEdgeBevel:90,radius:50mm,surfaceColorM:whitepearl,edgeM:multiplex_birke,edgeMWood:multiplex_birke,edgeMPlastic:,tableLeg:rs20,tableLeg75:rs20,tableLeg100:null,height:75,tableLegColor:black,tableLegColorDefault:black,tableLegColorSpecial:,tableLegColorType:Default,zarge:650,verbinder:y,tableLegWood:ash_tree_whitened,cableOutlet:noEdging,cableOutletType:noEdging,cableOutletPosition:90x90"
+            imgScale={1.0}
           />
 
           <WorkItem src={mclaren}
